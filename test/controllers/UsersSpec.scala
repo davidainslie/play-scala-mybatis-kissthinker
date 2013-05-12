@@ -1,0 +1,27 @@
+package controllers
+
+import org.specs2.mutable.Specification
+import play.api.test.Helpers._
+import play.api.http.HeaderNames
+import play.api.test.FakeRequest
+import models.User
+
+class UsersSpec extends Specification {
+  "User" should {
+    "view a user profile" in {
+      val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
+      def result = Users.view(1)(request)
+
+      status(result) mustEqual OK
+      contentType(result) must beSome("application/json")
+      charset(result) must beSome("utf-8")
+
+      import play.api.libs.json.Json
+      implicit val userFormat = Json.format[User]
+
+      val user = Json.parse(contentAsString(result)).as[User]
+
+      user.id mustEqual 1
+    }
+  }
+}
