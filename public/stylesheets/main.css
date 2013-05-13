@@ -7,10 +7,14 @@ body {
 
 #content {
     position: absolute;
-    top: 5px;
+    top: 40px;
     left: 5px;
     bottom: 5px;
     right: 5px;
     border-radius: 10px 10px 10px 10px;
     background-color: black;
+}
+
+#nav {
+    margin: 5px;
 }
