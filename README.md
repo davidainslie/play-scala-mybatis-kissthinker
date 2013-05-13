@@ -299,3 +299,71 @@ object UserDAO {
 
 What a superb DAO implementation! Hey! We are green again!
 Ok, time to refactor the hardcoding!
+So here is the next stage of our DAO, which is specific to MyBatis i.e. even though the public interface is datastore agnostic, we cannot swap out a different implementation such as Hibernate.
+But what about mocking? With Play, in this case, we won't need mocking - the example and code are self contained, so why mock?
+This new implementation is quite a rewrite, but still within the realms of manageability - explanation to follow:
+
+```scala
+object UserDAO {
+  def bind = Seq(insert)
+
+  def save(user: User): User = inTransaction { implicit session =>
+    val userEntry = new UserEntry(user)
+    insert(userEntry)
+    user.copy(id = userEntry.id)
+  }
+
+  private val insert = new Insert[UserEntry] {
+    keyGenerator = JdbcGeneratedKey(null, "id")
+
+    def xsql = <xsql>
+      insert into user (first_name, last_name)
+      values ({"first_name"?}, {"last_name"?})
+    </xsql>
+  }
+
+  class UserEntry(user: User) {
+    var id : Long = user.id
+
+    var first_name : String = user.firstName
+
+    var last_name : String = user.lastName
+  }
+}
+```
+
+The public interface is "save". Fair enough, we want to save a User.
+What we have done is code the actual database insertion code, in a separate method named "insert".
+This was chosen because MyBatis provides classes such as "Insert" and "Update" and we anticipate that "save" will have to make the choice of inserting or updating.
+Now haven't we just coded something that is not required at this time? Maybe, but I also wanted to separate "save" from "insert" because "save" deals with (is given) a User, whereas "insert" deals with (is given) a UserEntry.
+
+So what is UserEntry, if we already have a User? I've added this, because there are a few annoying things about MyBatis (even though it is an excellent product).
+Of course the same can be said for other technologies, so I'm not going to worry, but when writing my spec/example, I wanted User to be immutable.
+MyBatis (and again other persistence libraries) doesn't have a nice fit - the object that is given to "insert" method is actually mutated.
+So I've coded UserEntry, a mutable version of User and representing an actual entry in the User table of the database.
+
+The rest of the code is essentially working with the <a href="http://mybatis.org/scala/">MyBatis-Scala</a> library.
+Though note, I have added the object MyBatis as kind of a little helper, such as using the method "inTransaction".
+
+Just a quick followup note on how we can avoid the use of mocking, because this example feels like it should be an "integration test".
+We've actually updated our spec with one small addition, namely the use of "WithServer":
+
+```scala
+class UserDAOSpec extends Specification {
+  "UserDAO" should {
+    "insert new User which will be assigned next available ID, in this case 1" in new WithServer {
+      val user = UserDAO.save(User(firstName = "Scooby", lastName = "Doo"))
+      user.id mustEqual 1
+    }
+  }
+}
+```
+
+Because of "WithServer" our example will start up a server embedded within our "test environment".
+Play then configures itself e.g. read the file "application.conf" where many configurations can be declared including datasources.
+A new Play application will automatically configure a datasource for an in memory database - we just have to uncomment the declaration an use it.
+Take another look at the helper object MyBatis which uses the "default" datasource.
+
+And what about "seed data" for these "database tests"? Play sorts all of that for us as well, with "evolutions".
+Under the directory "conf/evolutions/default" are some SQL which will be run for us - create tables; seed data; drop tables (though this isn't required for an in-memory database).
+

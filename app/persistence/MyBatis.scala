@@ -7,11 +7,15 @@ import org.mybatis.scala.config.{Configuration, Environment}
 import org.mybatis.scala.session.Session
 
 object MyBatis {
-  private val configuration = Configuration(Environment("default", new ManagedTransactionFactory(), getDataSource()))
-
-  configuration ++= UserDAO
+  private val configuration = createConfiguration()
 
   private val sessionManager = configuration.createPersistenceContext
 
   def inTransaction[R](f: Session => R): R = sessionManager.transaction(f)
+
+  private def createConfiguration() = {
+    val configuration = Configuration(Environment("default", new ManagedTransactionFactory(), getDataSource()))
+    configuration ++= UserDAO
+    configuration
+  }
 }
