@@ -9,8 +9,9 @@ Front to back (simple demo) application showing how to use/approach the followin
 	<li>MyBatis (using mybatis-scala-core version 1.0.1)</li>
 </ul>
 
-Regarding the above technologies, all dependencies can be seen in <root>/project/Build.scala
+Regarding the utilised technologies, all dependencies can be seen in <root>/project/Build.scala
 We will be taking a small tangent from a traditional Play application and code a "single web page application" (instead of the usual multiple pages).
+Note that to easily follow the explanations below, I'm assuming that you are not a complete beginner in anything mentioned.
 
 Upon cloning this project (or downloading and decompressing the zip) you can run the application (before viewing the code) if you have Play installed.
 Don't have Play (or just need more information) then goto:
@@ -123,3 +124,60 @@ Here is the original main page:
 ```
 
 The above already has a "single web page application" feel to it, as the idea is that all your HTML/template pages will replace "@content" for a consistent layout.
+
+So we have our page already in place, now we can write the integration spec. Mmm... That's the wrong ways round for BDD.
+No matter, as mentioned we are going to re-implement the above page. Following is our spec to once again view User with ID of 1.
+
+```java
+class UsersIntegrationSpec extends Specification {
+  "User" should {
+    "view a user profile" in new WithChromeBrowser {
+      browser.goTo("/")
+      browser.title() mustEqual "Home"
+      browser.click("#usersButtonGroup")
+      browser.click("#user1")
+      browser.find("#content") contains "User ID: 1"
+    }
+  }
+}
+```
+
+This example, "view a user profile", essentially simulates how we anticipate interacting with the browser.
+I usually put together (a rough) HTML page at the same time as coding the spec/example.
+Doing these at the same time is of course not technically BDD (or TDD).
+However, as HTML is not really code, and the specs/examples in this case relate to something viewable, is is easier to envisage what the code should be with some associated HTML.
+We throw some HTML together, and can even do some CSS at this point, open the page in a browser (independently i.e. no frameworks/containers/servers running), and write our code.
+
+So before covering the above example, let's have a look at my first, thrown together, page (well, just he body to save space):
+
+```html
+<body>
+    <div id="nav">
+        <div class="btn-group">
+            <a id="usersButtonGroup" class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                Users
+                <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu">
+                <li>
+                    <a id="user1" href="#">View User with ID of 1</a>
+
+                    <script>
+                        $(function() {
+                            $("#user1").click(function() {
+                                $.getJSON('/users/1', function(user) {
+                                    $("#content").html("<h3 style='color: white'>User ID: " + user.id + "</h3>");
+                                });
+                            });
+                        });
+                    </script>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content">
+    </div>
+</body>
+```

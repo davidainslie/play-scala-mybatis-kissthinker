@@ -4,6 +4,7 @@ import org.specs2.mutable._
 
 import play.api.test._
 import play.api.test.Helpers._
+import util.ChromeDriverClass
 
 /**
  * add your integration spec here.
@@ -12,11 +13,11 @@ import play.api.test.Helpers._
 class IntegrationSpec extends Specification {
   "Application" should {
     "work from within a browser" in {
-      running(TestServer(3333), HTMLUNIT) { browser =>
+      running(TestServer(3333), /* HTMLUNIT <- Can not use as does not like jQuery */ ChromeDriverClass.get) { browser =>
 
         browser.goTo("http://localhost:3333/")
 
-        browser.pageSource must contain("Welcome")
+        browser.pageSource must contain("Home")
       }
     }
   }
