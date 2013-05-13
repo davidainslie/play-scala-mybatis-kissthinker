@@ -259,3 +259,43 @@ And again, it's almost identical to our previous hardcoded implementation.
 
 Finally onto some refactoring. We shall now bring in MyBatis by starting, as usual, with an example:
 
+```scala
+class UserDAOSpec extends Specification {
+  "UserDAO" should {
+    "insert new User which will be assigned next available ID, in this case 1" in {
+      val user = UserDAO.save(User(firstName = "Scooby", lastName = "Doo"))
+      user.id mustEqual 1
+    }
+  }
+}
+```
+
+To get from red to green, I need to:
+- Implement the new UserDAO and
+- Re-implement User
+
+Scala has so many good things (over Java) and here is just one. The current User class takes an ID, but now we want that ID set by something else (like the DAO) and also give a name.
+Why include name now and not before? Before it was not needed, just ID, but now we are not providing ID, so I want to provide something and so I've chosen name (a fairly obvious choice).
+However, the new implementation will break my current examples. Nop! Because Scala allows us to set defaults and provide arguments by name, we avoid that (just now anyway).
+This is handy in this situation, where we can concentrate on the current example and not have to immediately fix others.
+
+And here is the amended User:
+
+```scala
+case class User(id: Long = 0, firstName: String = "", lastName: String = "")
+```
+
+We're going to keep User immutable as per good Scala practice - well should be good practice in any language.
+
+As for our new DAO, again stick with what is immediately required. Upon a save, we should get back a User with ID of 1, so we hardcode again.
+If you've not already thought about it, maybe you should now question all this hardcoding!
+Just one point of writing lots of examples (tests) is that eventually one will come along where you will have to refactor and remove the hardcoding - <b>your design simple unravels</b>.
+
+```scala
+object UserDAO {
+  def save(user: User) = User(1)
+}
+```
+
+What a superb DAO implementation! Hey! We are green again!
+Ok, time to refactor the hardcoding!
