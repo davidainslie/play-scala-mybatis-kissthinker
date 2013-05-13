@@ -370,7 +370,7 @@ Under the directory "conf/evolutions/default" are some SQL which will be run for
 
 Let's add one more example before moving back to doing some more Ajax/Javascript and introducing CoffeeScript.
 
-Now I wanted to write an example to view a list of all users i.e. seed the in memory database with say 3 users and read them in.
+Now I wanted to write an example to view a list of all users i.e. seed the in memory database with say 4 users and read them in.
 But then I thought, just because I'm now using WithServer, will another example, with it's own embedded server still use the same MyBatis "context"?
 Remember I mentioned the MyBatis helper? Well we have an issue! And it's about time to. Now we'll have to do some pretty big refactoring, but hey, we have specs.
 
@@ -451,3 +451,5 @@ class UserDAO extends DAO {
 Ok! UserDAO hasn't changed that dramatically but these are big changes going from object to class and mixing in. The good news is that we are still green!
 Note that with all this refactoring going on, we could have now introduced a UserDAO interface. However, we are still (always) only doing what is necessary.
 Oh! And an interesting point, we had to declare "insert" method as "lazy" - without this, the call to "configuation ++= Seq(insert)" would need to come after the insert method or MyBatis would throw a wobbly.
+
+Now where were we? All users example! Here it is:
