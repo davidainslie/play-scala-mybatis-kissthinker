@@ -210,3 +210,42 @@ For this example, and for the first time, I've used the Chrome web driver (which
 Hence the WithChromeBrowser, an extension of WithBrowser, to load the Chrome web driver.
 Annoyingly, when running our specs with this driver, a popup dialog appears where we have to manually accept terms and conditions.
 I tried out the new (currently alpha) version of the driver, ChromeDriver2, and here we don't get any popup dialog, but it can be slow (can't decide which to use).
+
+Upon getting backing to a "green light", should be refactor now? Currently we are returning a hard coded user and not yet interacting with MyBatis.
+It's a matter of choice really. I'm going to code one more example first, to get a list of all users (which again will be hardcoded).
+Then we'll almost move onto some backend interaction - just before that, as part of the new example, I'm going for two versions, one as before, and one with CoffeeScript.
+
+Here's the new example in UsersSpec:
+
+```java
+"view all users" in {
+  val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
+  val result = Users.view()(request)
+
+  status(result) mustEqual OK
+  contentType(result) must beSome("application/json")
+  charset(result) must beSome("utf-8")
+
+  import play.api.libs.json.Json
+  implicit val userFormat = Json.format[User]
+
+  val users = Json.parse(contentAsString(result)).as[List[User]]
+
+  users.size mustEqual 3
+}
+```
+
+Almost identical to viewing a single user. This time we expect to get back a list of User in JSON format, consisting of 3 users.
+
+The new implementation, in Users, got me from red to green in one go (trust me):
+
+```java
+def view = Action {
+  implicit val userFormat = format[User]
+
+  val users = User(1) :: User(2) :: User(3) :: Nil
+  Ok(toJson(users))
+}
+```
+
+And again, it's almost identical to our previous hardcoded implementation.

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff423503-e9b4-4f2d-be36-190e1b06a8dd" name="Default" comment="">
+    <list default="true" id="ff423503-e9b4-4f2d-be36-190e1b06a8dd" name="Default" comment="Ok! Currently I can put up with the speed of ChromeDriver2.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/util/WithChromeBrowser.scala" afterPath="$PROJECT_DIR$/test/util/WithChromeBrowser.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Users.scala" afterPath="$PROJECT_DIR$/app/controllers/Users.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/UsersSpec.scala" afterPath="$PROJECT_DIR$/test/controllers/UsersSpec.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="play-ajax-scala-mybatis-kissthinker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368442238042" ignored="false" />
-    <file path="/UsersSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368364108715" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368441577631" ignored="false" />
+    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368447144600" ignored="false" />
+    <file path="/UsersSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368446700765" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368447470857" ignored="false" />
     <file path="/User.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368316126006" ignored="false" />
     <file path="/fragment.java" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368366135190" ignored="false" />
-    <file path="/Users.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368364033645" ignored="false" />
+    <file path="/Users.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368446828005" ignored="false" />
     <file path="/routes" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368369847153" ignored="false" />
     <file path="/UsersIntegrationSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368440804489" ignored="false" />
     <file path="/main.scala.html" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368435367834" ignored="false" />
@@ -88,7 +89,7 @@
       <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="211" column="161" selection-start="10202" selection-end="10202" vertical-scroll-proportion="-21.84">
+            <state line="243" column="41" selection-start="11438" selection-end="11438" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,30 +113,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersSpec.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/controllers/UsersSpec.scala">
+      <file leaf-file-name="main.scala.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="36" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+            <state line="17" column="0" selection-start="752" selection-end="1773" vertical-scroll-proportion="-3.1538463">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WithChromeBrowser.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/util/WithChromeBrowser.scala">
+      <file leaf-file-name="UsersSpec.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/controllers/UsersSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="130" selection-start="341" selection-end="341" vertical-scroll-proportion="0.19345662">
-              <folding>
-                <element signature="e#14#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="752" selection-end="1773" vertical-scroll-proportion="-5.230769">
+            <state line="24" column="42" selection-start="722" selection-end="722" vertical-scroll-proportion="0.48364154">
               <folding />
             </state>
           </provider>
@@ -145,9 +135,16 @@
         <entry file="file://$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="7" column="52" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#21#60#0" expanded="true" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Users.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Users.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="161" selection-end="305" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,8 +168,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/app/models/User.scala" />
-        <option value="$PROJECT_DIR$/app/controllers/Users.scala" />
-        <option value="$PROJECT_DIR$/test/controllers/UsersSpec.scala" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
         <option value="$PROJECT_DIR$/app/controllers/Application.scala" />
@@ -182,8 +177,10 @@
         <option value="$PROJECT_DIR$/test/IntegrationSpec.scala" />
         <option value="$PROJECT_DIR$/app/views/main.scala.html" />
         <option value="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test/util/WithChromeBrowser.scala" />
+        <option value="$PROJECT_DIR$/test/controllers/UsersSpec.scala" />
+        <option value="$PROJECT_DIR$/app/controllers/Users.scala" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -220,7 +217,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -405,6 +401,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -420,12 +417,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -435,7 +432,7 @@
       <recent name="C:\git\play-scala-mybatis-kissthinker" />
     </key>
   </component>
-  <component name="RunManager" selected="Specs2.UsersIntegrationSpec">
+  <component name="RunManager" selected="Specs2.UsersSpec">
     <configuration default="false" name="UsersSpec" type="Specs2RunConfiguration" factoryName="Specs2" temporary="true">
       <module name="play-scala-mybatis-kissthinker" />
       <setting name="path" value="controllers.UsersSpec" />
@@ -502,14 +499,6 @@
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
     <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
       <module name="" />
       <setting name="path" value="" />
@@ -523,17 +512,12 @@
       <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -561,6 +545,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -605,10 +602,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Specs2.UsersIntegrationSpec" />
-        <item index="1" class="java.lang.String" itemvalue="Specs2.IntegrationSpec" />
-        <item index="2" class="java.lang.String" itemvalue="Specs2.ApplicationSpec" />
-        <item index="3" class="java.lang.String" itemvalue="Specs2.UsersSpec" />
+        <item index="0" class="java.lang.String" itemvalue="Specs2.UsersSpec" />
+        <item index="1" class="java.lang.String" itemvalue="Specs2.UsersIntegrationSpec" />
+        <item index="2" class="java.lang.String" itemvalue="Specs2.IntegrationSpec" />
+        <item index="3" class="java.lang.String" itemvalue="Specs2.ApplicationSpec" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -688,7 +685,11 @@
       <created>1368441580312</created>
       <updated>1368441580312</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Ok! Currently I can put up with the speed of ChromeDriver2.">
+      <created>1368442334373</created>
+      <updated>1368442334373</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -782,7 +783,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="JSON quotes not showing nicely in MD." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ok! Currently I can put up with the speed of ChromeDriver2." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -807,6 +808,7 @@
     <MESSAGE value="Updated image." />
     <MESSAGE value="MD format error." />
     <MESSAGE value="JSON quotes not showing nicely in MD." />
+    <MESSAGE value="Ok! Currently I can put up with the speed of ChromeDriver2." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -818,9 +820,7 @@
   <component name="editorHistoryManager">
     <entry file="jar://C:/play/play-2.1.0/repository/local/play/play-test_2.10/2.1.0/jars/play-test_2.10.jar!/play/api/test/TestBrowser.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="507" selection-end="507" vertical-scroll-proportion="0.24">
-          <folding />
-        </state>
+        <state line="6" column="7" selection-start="507" selection-end="507" vertical-scroll-proportion="0.24" />
       </provider>
     </entry>
     <entry file="jar://C:/play/play-2.1.0/repository/local/org.seleniumhq.selenium/selenium-chrome-driver/2.25.0/jars/selenium-chrome-driver.jar!/org/openqa/selenium/chrome/ChromeDriver.class">
@@ -830,23 +830,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/application.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Users.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="7" selection-start="134" selection-end="134" vertical-scroll-proportion="0.15384616">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/routes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="53" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
@@ -858,32 +842,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="29" selection-start="154" selection-end="154" vertical-scroll-proportion="0.22030237">
-          <folding />
-        </state>
+        <state line="7" column="29" selection-start="154" selection-end="154" vertical-scroll-proportion="0.22030237" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/IntegrationSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="83" selection-start="456" selection-end="456" vertical-scroll-proportion="0.51403886">
-          <folding>
-            <element signature="e#14#41#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="15" column="83" selection-start="456" selection-end="456" vertical-scroll-proportion="0.51403886" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ApplicationSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="49" selection-start="746" selection-end="746" vertical-scroll-proportion="0.84449244">
-          <folding />
-        </state>
+        <state line="26" column="49" selection-start="746" selection-end="746" vertical-scroll-proportion="0.84449244" />
       </provider>
     </entry>
     <entry file="jar://C:/play/play-2.1.0/repository/local/play/play-test_2.10/2.1.0/jars/play-test_2.10.jar!/play/api/test/WithBrowser.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="27" selection-start="49" selection-end="49" vertical-scroll-proportion="0.04775281">
-          <folding />
-        </state>
+        <state line="1" column="27" selection-start="49" selection-end="49" vertical-scroll-proportion="0.04775281" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
@@ -893,16 +867,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
+    <entry file="file://$PROJECT_DIR$/test/util/WithChromeBrowser.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="752" selection-end="1773" vertical-scroll-proportion="-5.230769">
+        <state line="13" column="42" selection-start="521" selection-end="521" vertical-scroll-proportion="0.314367" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/routes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="53" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/controllers/UsersSpec.scala">
+    <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="36" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+        <state line="17" column="0" selection-start="752" selection-end="1773" vertical-scroll-proportion="-3.1538463">
           <folding />
         </state>
       </provider>
@@ -910,25 +889,28 @@
     <entry file="file://$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="52" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#21#60#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Users.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="161" selection-end="305" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="161" selection-start="10202" selection-end="10202" vertical-scroll-proportion="-21.84">
+        <state line="243" column="41" selection-start="11438" selection-end="11438" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/util/WithChromeBrowser.scala">
+    <entry file="file://$PROJECT_DIR$/test/controllers/UsersSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="130" selection-start="341" selection-end="341" vertical-scroll-proportion="0.19345662">
-          <folding>
-            <element signature="e#14#46#0" expanded="true" />
-          </folding>
+        <state line="24" column="42" selection-start="722" selection-end="722" vertical-scroll-proportion="0.48364154">
+          <folding />
         </state>
       </provider>
     </entry>

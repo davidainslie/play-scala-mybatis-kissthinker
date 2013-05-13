@@ -10,7 +10,7 @@ class UsersSpec extends Specification {
   "User" should {
     "view a user profile" in {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
-      def result = Users.view(1)(request)
+      val result = Users.view(1)(request)
 
       status(result) mustEqual OK
       contentType(result) must beSome("application/json")
@@ -22,6 +22,22 @@ class UsersSpec extends Specification {
       val user = Json.parse(contentAsString(result)).as[User]
 
       user.id mustEqual 1
+    }
+
+    "view all users" in {
+      val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
+      val result = Users.view()(request)
+
+      status(result) mustEqual OK
+      contentType(result) must beSome("application/json")
+      charset(result) must beSome("utf-8")
+
+      import play.api.libs.json.Json
+      implicit val userFormat = Json.format[User]
+
+      val users = Json.parse(contentAsString(result)).as[List[User]]
+
+      users.size mustEqual 3
     }
   }
 }
