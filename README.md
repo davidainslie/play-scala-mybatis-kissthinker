@@ -181,3 +181,32 @@ So before covering the above example, let's have a look at my first, thrown toge
     </div>
 </body>
 ```
+
+Here we have two main divs.
+The last one is pretty straight forward - it's empty. This will be where all content is set for our single web page application.
+The first div is a Twitter Bootstrap navigation bar. It's mainly Bootstrap stuff apart from the <script>.
+Our single web page application works with Ajax/jQuery/JavaScript, which will make calls to our server and receive JSON.
+
+So, Ajax?
+
+We want to make a call to get, as JSON, the User with ID of 1. To make the call we do:
+```java
+$.getJSON('/users/1', <plus a callback function to handle received JSON>)
+```
+
+The call will be issued upon clicking the link with (CSS) id "user1".
+Note we've wrapped the clicking and Ajax call inside "$(function() ...". This is just asking jQuery to run (setup) everything inside upon page load.
+And finally upon receiving JSON, we use the results to set our single web page "content".
+
+Now the spec example above should be more readable.
+With the given "browser", go to the main page. Click the nav bar to ask for "user 1", and assert the page result.
+
+And what is that "new WithChromeBrowser"?
+We are testing/driving our web browser with Selenium. Selenium need a web browser driver - if we used the default, the declaration would be "new WithBrowser".
+However, the default driver, doesn't seem to like jQuery. Running with the default gives the exception: "Cannot find function addEventListener".
+Normally, concerning jQuery, I use the Firefox web driver which is included in Play. However, on one of my PCs it hangs!
+
+For this example, and for the first time, I've used the Chrome web driver (which I downloaded into the root of this project).
+Hence the WithChromeBrowser, an extension of WithBrowser, to load the Chrome web driver.
+Annoyingly, when running our specs with this driver, a popup dialog appears where we have to manually accept terms and conditions.
+I tried out the new (currently alpha) version of the driver, ChromeDriver2, and here we don't get any popup dialog, but it is incredibly slow.

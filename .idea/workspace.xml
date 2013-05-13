@@ -2,27 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff423503-e9b4-4f2d-be36-190e1b06a8dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chromedriver2.exe" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/util/WithChromeBrowser.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Application.scala" afterPath="$PROJECT_DIR$/app/controllers/Application.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ApplicationSpec.scala" afterPath="$PROJECT_DIR$/test/ApplicationSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/IntegrationSpec.scala" afterPath="$PROJECT_DIR$/test/IntegrationSpec.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" afterPath="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/index.scala.html" afterPath="$PROJECT_DIR$/app/views/index.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.scala.html" afterPath="$PROJECT_DIR$/app/views/main.scala.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="play-ajax-scala-mybatis-kissthinker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368439001897" ignored="false" />
+    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368441138986" ignored="false" />
     <file path="/UsersSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368364108715" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368432279899" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368439082413" ignored="false" />
     <file path="/User.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368316126006" ignored="false" />
     <file path="/fragment.java" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368366135190" ignored="false" />
     <file path="/Users.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368364033645" ignored="false" />
     <file path="/routes" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368369847153" ignored="false" />
-    <file path="/UsersIntegrationSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368435782688" ignored="false" />
+    <file path="/UsersIntegrationSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368440804489" ignored="false" />
     <file path="/main.scala.html" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368435367834" ignored="false" />
     <file path="/a.dummy" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368369655571" ignored="false" />
     <file path="/main.css" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368398404280" ignored="false" />
@@ -95,7 +87,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="35" selection-start="7496" selection-end="7496" vertical-scroll-proportion="0.5811594">
+            <state line="195" column="49" selection-start="8749" selection-end="8749" vertical-scroll-proportion="0.5565217">
               <folding />
             </state>
           </provider>
@@ -131,7 +123,7 @@
       <file leaf-file-name="UsersIntegrationSpec.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="92" selection-end="412" vertical-scroll-proportion="0.0">
+            <state line="7" column="50" selection-start="194" selection-end="211" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#21#60#0" expanded="true" />
               </folding>
@@ -179,8 +171,8 @@
         <option value="$PROJECT_DIR$/test/ApplicationSpec.scala" />
         <option value="$PROJECT_DIR$/test/IntegrationSpec.scala" />
         <option value="$PROJECT_DIR$/app/views/main.scala.html" />
-        <option value="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" />
         <option value="$PROJECT_DIR$/test/util/WithChromeBrowser.scala" />
+        <option value="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -654,7 +646,11 @@
       <created>1368404383663</created>
       <updated>1368404383663</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Chrome driver utility.">
+      <created>1368439093198</created>
+      <updated>1368439093198</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -728,7 +724,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chrome driver introduced." />
+    <option name="LAST_COMMIT_MESSAGE" value="Chrome driver utility." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -747,6 +743,7 @@
     <MESSAGE value="Documentation update." />
     <MESSAGE value="Integration spec." />
     <MESSAGE value="Chrome driver introduced." />
+    <MESSAGE value="Chrome driver utility." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -833,24 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="92" selection-end="412" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#21#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/util/WithChromeBrowser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#14#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="10" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0">
@@ -865,9 +844,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/util/WithChromeBrowser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#14#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="50" selection-start="194" selection-end="211" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="35" selection-start="7496" selection-end="7496" vertical-scroll-proportion="0.5811594">
+        <state line="195" column="49" selection-start="8749" selection-end="8749" vertical-scroll-proportion="0.5565217">
           <folding />
         </state>
       </provider>
