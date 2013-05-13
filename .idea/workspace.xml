@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff423503-e9b4-4f2d-be36-190e1b06a8dd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/model.png" afterPath="$PROJECT_DIR$/doc/model.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="play-ajax-scala-mybatis-kissthinker.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368441138986" ignored="false" />
     <file path="/UsersSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368364108715" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368441261218" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368441268935" ignored="false" />
     <file path="/User.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368316126006" ignored="false" />
     <file path="/fragment.java" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368366135190" ignored="false" />
     <file path="/Users.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368364033645" ignored="false" />
@@ -86,7 +87,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="198" column="36" selection-start="9005" selection-end="9005" vertical-scroll-proportion="0.6304348">
+            <state line="22" column="63" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.43333334">
               <folding />
             </state>
           </provider>
@@ -657,7 +658,11 @@
       <created>1368441263273</created>
       <updated>1368441263273</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Documentation.">
+      <created>1368441273013</created>
+      <updated>1368441273013</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -873,7 +878,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="198" column="36" selection-start="9005" selection-end="9005" vertical-scroll-proportion="0.6304348">
+        <state line="22" column="63" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.43333334">
           <folding />
         </state>
       </provider>
