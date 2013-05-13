@@ -209,4 +209,4 @@ Normally, concerning jQuery, I use the Firefox web driver which is included in P
 For this example, and for the first time, I've used the Chrome web driver (which I downloaded into the root of this project).
 Hence the WithChromeBrowser, an extension of WithBrowser, to load the Chrome web driver.
 Annoyingly, when running our specs with this driver, a popup dialog appears where we have to manually accept terms and conditions.
-I tried out the new (currently alpha) version of the driver, ChromeDriver2, and here we don't get any popup dialog, but it is incredibly slow.
+I tried out the new (currently alpha) version of the driver, ChromeDriver2, and here we don't get any popup dialog, but it can be slow (can't decide which to use).
