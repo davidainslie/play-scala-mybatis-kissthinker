@@ -49,7 +49,7 @@ We shall dive in with an example that actually goes through Play, specifically, 
 
 So, the first spec and example to request for user with ID of 1, and assert that the result is a JSON representation of User, which has ID of 1:
 
-```java
+```scala
 class UsersSpec extends Specification {
   "User" should {
     "view a user profile" in {
@@ -77,7 +77,7 @@ You can of course see all the code/imports under "src".
 Initially the above will not compile. Since we are BDD and write our specs/examples first, we next have to code an implementation.
 The first implementation should fail, if we apply the traditional TDD method of "red light, green light, refactor (if appropriate)":
 
-```java
+```scala
 object Users extends Controller {
   def view(id: Long) = Action {
     Ok(Json.obj("id" -> -1) )
@@ -93,7 +93,7 @@ To then get a "green" example, we just change the returned "id" to be 1.
 And next we decide if any refactoring would be appropriate. I think so.
 We have a User object, so let's use that an "auto" generate JSON, just as we showed what we wanted from our example (which was to "auto" parse JSON):
 
-```java
+```scala
 object Users extends Controller {
   def view(id: Long) = Action {
     implicit val userFormat = format[User]
@@ -135,7 +135,7 @@ The above already has a "single web page application" feel to it, as the idea is
 So we have our page already in place, now we can write the integration spec. Mmm... That's the wrong ways round for BDD.
 No matter, as mentioned we are going to re-implement the above page. Following is our spec to once again view User with ID of 1.
 
-```java
+```scala
 class UsersIntegrationSpec extends Specification {
   "User" should {
     "view a user profile" in new WithChromeBrowser {
@@ -197,7 +197,7 @@ Our single web page application works with Ajax/jQuery/JavaScript, which will ma
 So, Ajax?
 
 We want to make a call to get, as JSON, the User with ID of 1. To make the call we do:
-```java
+```html
 $.getJSON("/users/1", <plus a callback function to handle received JSON>)
 ```
 
@@ -224,7 +224,7 @@ And after refactoring, I'm going to show alternatives to Ajax/JavaScript, namely
 
 Here's the new example in UsersSpec:
 
-```java
+```scala
 "view all users" in {
   val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
   val result = Users.view()(request)
@@ -246,7 +246,7 @@ Almost identical to viewing a single user. This time we expect to get back a lis
 
 The new implementation, in Users, got me from red to green in one go (trust me):
 
-```java
+```scala
 def view = Action {
   implicit val userFormat = format[User]
 
@@ -257,4 +257,5 @@ def view = Action {
 
 And again, it's almost identical to our previous hardcoded implementation.
 
-Finally onto some refactoring. We shall now bring in MyBatis.
+Finally onto some refactoring. We shall now bring in MyBatis by starting, as usual, with an example:
+
