@@ -184,7 +184,7 @@ So before covering the above example, let's have a look at my first, thrown toge
 
 Here we have two main divs.
 The last one is pretty straight forward - it's empty. This will be where all content is set for our single web page application.
-The first div is a Twitter Bootstrap navigation bar. It's mainly Bootstrap stuff apart from the <script>.
+The first div is a Twitter Bootstrap navigation bar. It's mainly Bootstrap stuff apart from the "script".
 Our single web page application works with Ajax/jQuery/JavaScript, which will make calls to our server and receive JSON.
 
 So, Ajax?
