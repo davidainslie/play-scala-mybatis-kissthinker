@@ -15,9 +15,9 @@ Note that to easily follow the explanations below, I'm assuming that you are not
 
 There are other versions of this application, which instead of using MyBatis use:
 <ul>
-    <li><a href="https://github.com/davidainslie/play-scala-hibernate-kissthinker">Hibernate</a><li>
-    <li><a href="https://github.com/davidainslie/play-scala-mongo-casbah-salat-kissthinker">Mongodb with Casbah and Salat</a><li>
-    <li><a href="https://github.com/davidainslie/play-scala-reactive-mongo-kissthinker">Mongodb with ReactiveMongo</a><li>
+    <li><a href="https://github.com/davidainslie/play-scala-hibernate-kissthinker">Hibernate</a></li>
+    <li><a href="https://github.com/davidainslie/play-scala-mongo-casbah-salat-kissthinker">Mongodb with Casbah and Salat</a></li>
+    <li><a href="https://github.com/davidainslie/play-scala-reactive-mongo-kissthinker">Mongodb with ReactiveMongo</a></li>
 <ul>
 
 Upon cloning this project (or downloading and decompressing the zip) you can run the application (before viewing the code) if you have Play installed.
