@@ -24,7 +24,7 @@ class UsersSpec extends Specification {
       user.id mustEqual 1
     }
 
-    "view all users" in {
+    /*"view all users" in {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
       val result = Users.view()(request)
 
@@ -38,6 +38,6 @@ class UsersSpec extends Specification {
       val users = Json.parse(contentAsString(result)).as[List[User]]
 
       users.size mustEqual 3
-    }
+    }*/
   }
 }

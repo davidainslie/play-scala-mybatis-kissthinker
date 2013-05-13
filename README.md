@@ -368,3 +368,86 @@ Take another look at the helper object MyBatis which uses the "default" datasour
 And what about "seed data" for these "database tests"? Play sorts all of that for us as well, with "evolutions".
 Under the directory "conf/evolutions/default" are some SQL which will be run for us - create tables; seed data; drop tables (though this isn't required for an in-memory database).
 
+Let's add one more example before moving back to doing some more Ajax/Javascript and introducing CoffeeScript.
+
+Now I wanted to write an example to view a list of all users i.e. seed the in memory database with say 3 users and read them in.
+But then I thought, just because I'm now using WithServer, will another example, with it's own embedded server still use the same MyBatis "context"?
+Remember I mentioned the MyBatis helper? Well we have an issue! And it's about time to. Now we'll have to do some pretty big refactoring, but hey, we have specs.
+
+Here is the original helper:
+
+```scala
+object MyBatis {
+  private val configuration = createConfiguration()
+
+  private val sessionManager = configuration.createPersistenceContext
+
+  def inTransaction[R](f: Session => R): R = sessionManager.transaction(f)
+
+  private def createConfiguration() = {
+    val configuration = Configuration(Environment("default", new ManagedTransactionFactory(), getDataSource()))
+    configuration ++= UserDAO
+    configuration
+  }
+}
+```
+
+It's an object (singleton for all you Java developers).
+The issue is that when the first example runs, the "vals" are initialised when MyBatis is first accessed.
+After the example, the actual MyBatis library shuts down its database connection pool. Upon running the next example, an exception is thrown, complaining about the shutdown pool.
+To prove this to myself, I wrote a duplicate example (which I've left in).
+
+Moral of the story is - refactor.
+We shall do two large refactorings:
+<ol>
+    <li>object MyBatis becomes a trait, to allow mixing in of its functionality.</li>
+    <li>object UserDAO becomes a class so we can mixin the MyBatis trait - by doing this, we can now instantiate the DAO for each example and so create a new connection pool each time.</li>
+    <li>and then a bit of a clean up: rename MyBatis to DAO and move it to new package "mybatis"; get rid of "def bind" in UserDAO since it is now given the DAO (formally MyBatis) functionality where we can access its "configuration".</li>
+</ol>
+
+Our refactored DAO (formally MyBatis) now looks like:
+
+```scala
+trait DAO {
+  protected val configuration = Configuration(Environment("default", new ManagedTransactionFactory(), getDataSource()))
+
+  private val sessionManager = configuration.createPersistenceContext
+
+  def inTransaction[R](f: Session => R): R = sessionManager.transaction(f)
+}
+```
+
+And our refactored UserDAO look like:
+
+```scala
+class UserDAO extends DAO {
+  configuration ++= Seq(insert)
+
+  def save(user: User): User = inTransaction { implicit session =>
+    val userEntry = new UserEntry(user)
+    insert(userEntry)
+    user.copy(id = userEntry.id)
+  }
+
+  private lazy val insert = new Insert[UserEntry] {
+    keyGenerator = JdbcGeneratedKey(null, "id")
+
+    def xsql = <xsql>
+      insert into user (first_name, last_name)
+      values ({"first_name"?}, {"last_name"?})
+    </xsql>
+  }
+
+  class UserEntry(user: User) {
+    var id : Long = user.id
+
+    var first_name : String = user.firstName
+
+    var last_name : String = user.lastName
+  }
+}
+```
+
+Ok! UserDAO hasn't changed that dramatically but these are big changes going from object to class and mixing in. The good news is that we are still green!
+Note that with all this refactoring going on, we could have now introduced a UserDAO interface. However, we are still (always) only doing what is necessary.
+Oh! And an interesting point, we had to declare "insert" method as "lazy" - without this, the call to "configuation ++= Seq(insert)" would need to come after the insert method or MyBatis would throw a wobbly.

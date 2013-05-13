@@ -1,12 +1,12 @@
 package persistence
 
-import models.User
 import org.mybatis.scala.mapping.{Update, JdbcGeneratedKey, SelectOneBy, Insert}
 import org.mybatis.scala.mapping.Binding._
-import MyBatis._
+import models.User
+import persistence.mybatis.DAO
 
-object UserDAO {
-  def bind = Seq(insert, update, findById)
+class UserDAO extends DAO {
+  configuration ++= Seq(insert, update, findById)
 
   def save(user: User): User = user.id match {
     case 0 => inTransaction { implicit session =>
@@ -21,7 +21,7 @@ object UserDAO {
     }
   }
 
-  private val insert = new Insert[UserEntry] {
+  private lazy val insert = new Insert[UserEntry] {
     keyGenerator = JdbcGeneratedKey(null, "id")
 
     def xsql = <xsql>
@@ -30,7 +30,7 @@ object UserDAO {
     </xsql>
   }
 
-  private val update = new Update[User] {
+  private lazy val update = new Update[User] {
     def xsql = <xsql>
       update user
       set first_name = {"firstName"?}, last_name = {"lastName"?}
@@ -38,7 +38,7 @@ object UserDAO {
     </xsql>
   }
 
-  private val findById = new SelectOneBy[Long, UserEntry] {
+  private lazy val findById = new SelectOneBy[Long, UserEntry] {
     def xsql = <xsql>select * from user where id = {"id"?}</xsql>
   }
 
