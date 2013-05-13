@@ -13,6 +13,13 @@ Regarding the utilised technologies, all dependencies can be seen in <root>/proj
 We will be taking a small tangent from a traditional Play application and code a "single web page application" (instead of the usual multiple pages).
 Note that to easily follow the explanations below, I'm assuming that you are not a complete beginner in anything mentioned.
 
+There are other versions of this application, which instead of using MyBatis use:
+<ul>
+    <li><a href="https://github.com/davidainslie/play-scala-hibernate-kissthinker">Hibernate</a><li>
+    <li><a href="https://github.com/davidainslie/play-scala-mongo-casbah-salat-kissthinker">Mongodb with Casbah and Salat</a><li>
+    <li><a href="https://github.com/davidainslie/play-scala-reactive-mongo-kissthinker">Mongodb with ReactiveMongo</a><li>
+<ul>
+
 Upon cloning this project (or downloading and decompressing the zip) you can run the application (before viewing the code) if you have Play installed.
 Don't have Play (or just need more information) then goto:
 http://www.playframework.com
@@ -213,7 +220,7 @@ I tried out the new (currently alpha) version of the driver, ChromeDriver2, and 
 
 Upon getting backing to a "green light", should be refactor now? Currently we are returning a hard coded user and not yet interacting with MyBatis.
 It's a matter of choice really. I'm going to code one more example first, to get a list of all users (which again will be hardcoded).
-Then we'll almost move onto some backend interaction - just before that, as part of the new example, I'm going for two versions, one as before, and one with CoffeeScript.
+And after refactoring, I'm going to show alternatives to Ajax/JavaScript, namely Ajax/CoffeeScript.
 
 Here's the new example in UsersSpec:
 
@@ -249,3 +256,5 @@ def view = Action {
 ```
 
 And again, it's almost identical to our previous hardcoded implementation.
+
+Finally onto some refactoring. We shall now bring in MyBatis.
