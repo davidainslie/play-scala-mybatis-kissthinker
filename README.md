@@ -191,7 +191,7 @@ So, Ajax?
 
 We want to make a call to get, as JSON, the User with ID of 1. To make the call we do:
 ```java
-$.getJSON('/users/1', <plus a callback function to handle received JSON>)
+$.getJSON("/users/1", <plus a callback function to handle received JSON>)
 ```
 
 The call will be issued upon clicking the link with (CSS) id "user1".
