@@ -651,4 +651,4 @@ So I opened up the relevant HTML page; added a style for white text; refreshed t
 
 Currently the UI is pretty naff, as shown by these screenshots, but as yet we've not really spent much time here - we'll get there.
 
-![Alt Screenshot 1](/doc/screenshot1.png "Screenshot 1")    -->    ![Alt Screenshot 2](/doc/screenshot2.png "Screenshot 2")
+![Alt Screenshot 1](/doc/screenshot1.png "Screenshot 1")            ![Alt Screenshot 2](/doc/screenshot2.png "Screenshot 2")
