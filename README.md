@@ -565,7 +565,7 @@ And the moment I can't think of another way. In the more "traditional" async/con
 Now we've added another "nav" link to our main.scala.html, to make the relevant Ajax call.
 With this second nav, the page is already looking ugly. We have a green light, so we can refactor. Time to dabble in CoffeeScript.
 
-By the way, here is the newly added Ajax/Javascript call (and I know we could extract this out into a separate file, but we'd still have the nasty JavaScript, just somewhere else):
+By the way, here is the newly added Ajax/Javascript call (and I know we could extract this out into a separate file):
 
 ```html
 <li>
@@ -591,7 +591,45 @@ A quick word on CoffeeScript.
 It's to JavaScript, what Groovy is to Java - well, kind of, but this is a handy thought.
 When writing CoffeeScript, you can almost write JavaScript, but just like Groovy, CoffeeScript can be so much more succinct and palatable.
 
+So, let's extract the Ajax/JavaScript and at the same time introduce CoffeeScript, which essentially makes the Javascript more readable and functional, in line with our Scala code.
+The updated "nav" now refers to external JavaScript files (which are actually auto compiled, by Play, from our CoffeeScript files):
 
+```html
+<ul class="dropdown-menu">
+    <li>
+        <a id="users" href="#">View All Users</a>
+        <script type="text/javascript" src='@routes.Assets.at("javascripts/users.js")'></script>
+    </li>
+
+    <li>
+        <a id="user1" href="#">View User with ID of 1</a>
+        <script type="text/javascript" src='@routes.Assets.at("javascripts/user.1.js")'></script>
+    </li>
+</ul>
+```
+
+Ah! Good! Readable again. And here are the two new CoffeeScript files, which are stored under "app/assets/javascripts":
+
+To get all users (as JSON) and process:
+
+```javascript
+$("#users").bind "click", (event) =>
+    $ ->
+        $.get "/users", (users) ->
+            $("#content").html("<ul id='usersList' style='color: white'></ul>")
+
+            $.each users, (index, user) ->
+                $("#usersList").append("<li>#{user.id}, #{user.firstName}, #{user.lastName}</li>")
+```
+
+To get user with ID 1 (as JSON) and process:
+
+```javascript
+$("#user1").bind "click", (event) =>
+    $ ->
+        $.get "/users/1", (user) ->
+            $("#content").html("<h3 style='color: white'>User ID: #{user.id}</h3>")
+```
 
 With all the above spec/examples/implementation in place, maybe we should try running the application and interact with a browser?
 Even though we are BDD, Play is remarkable when it comes to running the server, changing code, and seeing the changes in the browser.
@@ -610,3 +648,7 @@ A great example of doing dynamic changes in your running Play application, is wh
 What gives? I opened up Chrome's "Developer Tools" to see the DOM of the page, and there were the users.
 However, I had black text on a black background. These days you can change this in the browser, but to keep your changes you still have to update your file(s).
 So I opened up the relevant HTML page; added a style for white text; refreshed the browser; navigated back to view all users; and there they were!
+
+Currently the UI is pretty naff, as shown by these screenshots, but as yet we've not really spent much time here - we'll get there.
+
+![Alt Screenshot 1](/doc/screenshot1.png "Screenshot 1") ![Alt Screenshot 2](/doc/screenshot2.png "Screenshot 2")
