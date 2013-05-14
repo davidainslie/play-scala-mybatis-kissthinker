@@ -2,7 +2,7 @@ Front to back (simple demo) application showing how to use/approach the followin
 
 <ul>
 	<li>Scala (version 2.10.1)</li>
-	<li>Play (2.1.0)</li>
+	<li>Play (2.1.1)</li>
 	<li>Web technologies including Ajax, JavaScript, JQuery, Twitter Bootstrap, HTML, CSS and some CoffeesScript</li>
 	<li>BDD with Specs2 1.13</li>
 	<li>BDD (Scala/Play) web application with FluentLenium (0.8.0)</li>
@@ -540,3 +540,47 @@ object Users extends Controller {
 }
 ```
 
+As for the actual "browser" spec, we again want to view all users and expect them to be added in the web page via an Ajax call. The new example in UsersIntegrationSpec is:
+
+```scala
+"view all users" in new WithChromeBrowser {
+  browser.goTo("/")
+  browser.title() mustEqual "Home"
+  browser.click("#usersButtonGroup")
+  browser.click("#users")
+
+  browser.waitUntil[Boolean](3, TimeUnit.SECONDS) {
+    browser.pageSource contains "Lennon"
+  }
+
+  browser.find("#usersList").getText contains "2, John, Lennon"
+}
+```
+
+In this integration spec (I've just realised that some may rather call this an acceptance spec as it simulates acceptance testing by an end user)...
+I'll try again. In this integration spec, I've added a wait - since an Ajax call is being performed, without the wait, we will "assert" before the JSON results are returned.
+Waiting is pretty ugly and I'd rather not do it. How long should we wait? I've guessed.
+And the moment I can't think of another way. In the more "traditional" async/concurrent test, I would use something along the lines of a CountDownLatch.
+
+Now we've added another "nav" link to our main.scala.html, to make the relevant Ajax call.
+With this second nav, the page is already looking ugly. We have a green light, so we can refactor. Time to dabble in CoffeeScript.
+
+
+
+With all the above spec/examples/implementation in place, maybe we should try running the application and interact with a browser?
+Even though we are BDD, Play is remarkable when it comes to running the server, changing code, and seeing the changes in the browser.
+
+And with Evolutions, you will be constantly in awe of Play e.g. upon running the Play application with:
+
+```scala
+> play run
+```
+
+then open a browser page at http://localhost:9000, we are presented with a request from Evolutions to set up the database:
+
+![Alt Evolutions - Run Scripts](/doc/evolutions.png "Evolutions - Run Scripts")
+
+A great example of doing dynamic changes in your running Play application, is when I wanted to view all users. The screen was empty!
+What gives? I opened up Chrome's "Developer Tools" to see the DOM of the page, and there were the users.
+However, I had black text on a black background. These days you can change this in the browser, but to keep your changes you still have to update your file(s).
+So I opened up the relevant HTML page; added a style for white text; refreshed the browser; navigated back to view all users; and there they were!

@@ -5,7 +5,9 @@
 # Home page
 GET     /                           controllers.Application.index
 
-GET     /users/:id                  controllers.Users.view(id: Long)
+GET     /users                      controllers.Users.users
+
+GET     /users/:id                  controllers.Users.user(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

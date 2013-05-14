@@ -25,6 +25,24 @@
 
                 <ul class="dropdown-menu">
                     <li>
+                        <a id="users" href="#">View All Users</a>
+
+                        <script>
+                            $(function() {
+                                $("#users").click(function() {
+                                    $.getJSON('/users', function(users) {
+                                        $("#content").html("<ul id='usersList' style='color: white'></ul>");
+
+                                        $.each(users, function(index, user) {
+                                            $("#usersList").append("<li>" + user.id + ",&nbsp;" + user.firstName + ",&nbsp;" + user.lastName + "</li>");
+                                        });
+                                    });
+                                });
+                            });
+                        </script>
+                    </li>
+
+                    <li>
                         <a id="user1" href="#">View User with ID of 1</a>
 
                         <script>

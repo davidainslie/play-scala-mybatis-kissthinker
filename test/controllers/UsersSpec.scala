@@ -3,14 +3,14 @@ package controllers
 import org.specs2.mutable.Specification
 import play.api.test.Helpers._
 import play.api.http.HeaderNames
-import play.api.test.{WithServer, FakeRequest}
+import play.api.test.{WithApplication, WithServer, FakeRequest}
 import models.User
 
 class UsersSpec extends Specification {
   "User" should {
-    "view a user profile" in {
+    "view a user profile" in new WithServer {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
-      val result = Users.view(1)(request)
+      val result = Users.user(1)(request)
 
       status(result) mustEqual OK
       contentType(result) must beSome("application/json")
@@ -26,7 +26,7 @@ class UsersSpec extends Specification {
 
     "view all users" in new WithServer {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
-      val result = Users.view()(request)
+      val result = Users.users()(request)
 
       status(result) mustEqual OK
       contentType(result) must beSome("application/json")
@@ -42,7 +42,7 @@ class UsersSpec extends Specification {
 
     "view all JSON users" in new WithServer {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
-      val result = Users.view()(request)
+      val result = Users.users()(request)
 
       status(result) mustEqual OK
       contentType(result) must beSome("application/json")
