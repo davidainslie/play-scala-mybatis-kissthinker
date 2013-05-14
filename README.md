@@ -565,6 +565,32 @@ And the moment I can't think of another way. In the more "traditional" async/con
 Now we've added another "nav" link to our main.scala.html, to make the relevant Ajax call.
 With this second nav, the page is already looking ugly. We have a green light, so we can refactor. Time to dabble in CoffeeScript.
 
+By the way, here is the newly added Ajax/Javascript call (and I know we could extract this out into a separate file, but we'd still have the nasty JavaScript, just somewhere else):
+
+```html
+<li>
+    <a id="users" href="#">View All Users</a>
+
+    <script>
+        $(function() {
+            $("#users").click(function() {
+                $.getJSON('/users', function(users) {
+                    $("#content").html("<ul id='usersList' style='color: white'></ul>");
+
+                    $.each(users, function(index, user) {
+                        $("#usersList").append("<li>" + user.id + ",&nbsp;" + user.firstName + ",&nbsp;" + user.lastName + "</li>");
+                    });
+                });
+            });
+        });
+    </script>
+</li>
+```
+
+A quick word on CoffeeScript.
+It's to JavaScript, what Groovy is to Java - well, kind of, but this is a handy thought.
+When writing CoffeeScript, you can almost write JavaScript, but just like Groovy, CoffeeScript can be so much more succinct and palatable.
+
 
 
 With all the above spec/examples/implementation in place, maybe we should try running the application and interact with a browser?
