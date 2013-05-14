@@ -2,23 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff423503-e9b4-4f2d-be36-190e1b06a8dd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/Build.scala" afterPath="$PROJECT_DIR$/project/Build.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Users.scala" afterPath="$PROJECT_DIR$/app/controllers/Users.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" afterPath="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/UsersSpec.scala" afterPath="$PROJECT_DIR$/test/controllers/UsersSpec.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.scala.html" afterPath="$PROJECT_DIR$/app/views/main.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea_modules/play-scala-mybatis-kissthinker-build.iml" afterPath="$PROJECT_DIR$/.idea_modules/play-scala-mybatis-kissthinker-build.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea_modules/play-scala-mybatis-kissthinker.iml" afterPath="$PROJECT_DIR$/.idea_modules/play-scala-mybatis-kissthinker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/plugins.sbt" afterPath="$PROJECT_DIR$/project/plugins.sbt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/evolutions.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="play-ajax-scala-mybatis-kissthinker.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368539978782" ignored="false" />
     <file path="/UsersSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368531214634" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368533305633" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368540032095" ignored="false" />
     <file path="/User.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368448797063" ignored="false" />
     <file path="/fragment.java" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368539365397" ignored="false" />
     <file path="/Users.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368528239962" ignored="false" />
@@ -109,7 +100,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="558" column="32" selection-start="24308" selection-end="24308" vertical-scroll-proportion="0.5565217">
+            <state line="563" column="29" selection-start="24873" selection-end="24873" vertical-scroll-proportion="0.67971015">
               <folding />
             </state>
           </provider>
@@ -837,7 +828,11 @@
       <created>1368528941138</created>
       <updated>1368528941138</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Integration example for &quot;view users&quot; with standard Ajax/JavaScript.">
+      <created>1368540044955</created>
+      <updated>1368540044955</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -931,7 +926,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Documentation and refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integration example for &quot;view users&quot; with standard Ajax/JavaScript." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -967,6 +962,7 @@
     <MESSAGE value="Spelling error." />
     <MESSAGE value="Correctly seeding (test/embedded) database." />
     <MESSAGE value="Documentation and refactoring" />
+    <MESSAGE value="Integration example for &quot;view users&quot; with standard Ajax/JavaScript." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1074,7 +1070,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="558" column="32" selection-start="24308" selection-end="24308" vertical-scroll-proportion="0.5565217">
+        <state line="563" column="29" selection-start="24873" selection-end="24873" vertical-scroll-proportion="0.67971015">
           <folding />
         </state>
       </provider>
