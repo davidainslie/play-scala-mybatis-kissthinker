@@ -7,10 +7,12 @@ import play.api.libs.json.Json
 import persistence.UserDAO
 
 object Users extends Controller {
+  val userDAO = new UserDAO()
+
   def view = Action {
     implicit val userFormat = format[User]
 
-    val users = new UserDAO().all
+    val users = userDAO.all
     Ok(toJson(users))
   }
 

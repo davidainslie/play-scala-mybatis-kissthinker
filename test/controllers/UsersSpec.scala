@@ -39,5 +39,20 @@ class UsersSpec extends Specification {
 
       users.size mustEqual 4
     }
+
+    "view all JSON users" in new WithServer {
+      val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
+      val result = Users.view()(request)
+
+      status(result) mustEqual OK
+      contentType(result) must beSome("application/json")
+      charset(result) must beSome("utf-8")
+
+      val users = contentAsString(result)
+
+      users must */("id" -> 2)
+      users must */("firstName" -> "John")
+      users must */("lastName" -> "Lennon")
+    }
   }
 }

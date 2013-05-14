@@ -452,4 +452,91 @@ Ok! UserDAO hasn't changed that dramatically but these are big changes going fro
 Note that with all this refactoring going on, we could have now introduced a UserDAO interface. However, we are still (always) only doing what is necessary.
 Oh! And an interesting point, we had to declare "insert" method as "lazy" - without this, the call to "configuation ++= Seq(insert)" would need to come after the insert method or MyBatis would throw a wobbly.
 
-Now where were we? All users example! Here it is:
+Now where were we? All users example! Here it is - first the DAO now has:
+
+```scala
+"find all User" in new WithServer {
+  val users = new UserDAO().all
+
+  users must contain(User(3, "George", "Harrison"),
+                     User(4, "Ringo", "Starr"),
+                     User(2, "John", "Lennon"),
+                     User(1, "Paul", "McCartney")).only
+  }
+```
+
+How does the DAO retrieve data from the test/embedded database? When our examples are run, we have SQL scripts executed, in their numerically named order - see scripts:
+conf/evolutions/default/1.sql and 2.sql
+
+I've also updated the original examples in this spec to account for the fact that there is now "seeded data".
+
+The UserDAO has had the following added to get to green:
+
+```scala
+def all: List[User] = inTransaction { implicit session =>
+  findAll().map(u => User(u.id, u.first_name, u.last_name)).toList
+}
+
+private lazy val findAll = new SelectList[UserEntry] {
+  def xsql = "select id, first_name, last_name from users"
+}
+```
+
+And we quickly (we are picking up pace) move onto adding an example in UsersSpec and relevant implementations to view all users.
+I've coded a second version of the following new spec just to show JSON matchers in Specs2, since front and back ends are communicating in JSON, though this version wouldn't really help us.
+
+```scala
+"view all users" in new WithServer {
+  val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
+  val result = Users.view()(request)
+
+  status(result) mustEqual OK
+  contentType(result) must beSome("application/json")
+  charset(result) must beSome("utf-8")
+
+  import play.api.libs.json.Json
+  implicit val userFormat = Json.format[User]
+
+  val users = Json.parse(contentAsString(result)).as[List[User]]
+
+  users.size mustEqual 4
+}
+
+"view all JSON users" in new WithServer {
+  val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
+  val result = Users.view()(request)
+
+  status(result) mustEqual OK
+  contentType(result) must beSome("application/json")
+  charset(result) must beSome("utf-8")
+
+  val users = contentAsString(result)
+
+  users must */("id" -> 2)
+  users must */("firstName" -> "John")
+  users must */("lastName" -> "Lennon")
+}
+```
+
+So the Users has been updated for green as:
+
+```scala
+object Users extends Controller {
+  val userDAO = new UserDAO()
+
+  def view = Action {
+    implicit val userFormat = format[User]
+
+    val users = userDAO.all
+    Ok(toJson(users))
+  }
+
+  def view(id: Long) = Action {
+    implicit val userFormat = format[User]
+
+    val user = User(1)
+    Ok(toJson(user))
+  }
+}
+```
+

@@ -18,6 +18,7 @@ class UserDAOSpec extends Specification {
 
     "find all User" in new WithServer {
       val users = new UserDAO().all
+
       users must contain(User(3, "George", "Harrison"),
                          User(4, "Ringo", "Starr"),
                          User(2, "John", "Lennon"),
