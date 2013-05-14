@@ -3,7 +3,7 @@ package controllers
 import org.specs2.mutable.Specification
 import play.api.test.Helpers._
 import play.api.http.HeaderNames
-import play.api.test.FakeRequest
+import play.api.test.{WithServer, FakeRequest}
 import models.User
 
 class UsersSpec extends Specification {
@@ -24,7 +24,7 @@ class UsersSpec extends Specification {
       user.id mustEqual 1
     }
 
-    /*"view all users" in {
+    "view all users" in new WithServer {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
       val result = Users.view()(request)
 
@@ -37,7 +37,7 @@ class UsersSpec extends Specification {
 
       val users = Json.parse(contentAsString(result)).as[List[User]]
 
-      users.size mustEqual 3
-    }*/
+      users.size mustEqual 4
+    }
   }
 }

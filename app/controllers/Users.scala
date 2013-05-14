@@ -4,12 +4,13 @@ import play.api.mvc._
 import play.api.libs.json.Json._
 import models.User
 import play.api.libs.json.Json
+import persistence.UserDAO
 
 object Users extends Controller {
   def view = Action {
     implicit val userFormat = format[User]
 
-    val users = User(1) :: User(2) :: User(3) :: Nil
+    val users = new UserDAO().all
     Ok(toJson(users))
   }
 
