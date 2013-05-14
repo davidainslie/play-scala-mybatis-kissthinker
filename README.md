@@ -290,7 +290,7 @@ We're going to keep User immutable as per good Scala practice - well should be g
 As for our new DAO, again stick with what is immediately required. Upon a save, we should get back a User with ID of 1, so we hardcode again.
 If you've not already thought about it, maybe you should now question all this hardcoding!
 Just one point of writing lots of examples (tests) is that eventually one will come along where you will have to refactor and remove the hardcoding -<br/>
-<b>your design simple unravels</b>.
+<b>your design simply unravels</b>.
 
 ```scala
 object UserDAO {
