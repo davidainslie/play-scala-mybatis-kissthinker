@@ -7,9 +7,9 @@
     </list>
     <ignored path="play-ajax-scala-mybatis-kissthinker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368569571525" ignored="false" />
+    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368570082538" ignored="false" />
     <file path="/UsersSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368531214634" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368569997797" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368570046508" ignored="false" />
     <file path="/User.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368448797063" ignored="false" />
     <file path="/fragment.java" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368539365397" ignored="false" />
     <file path="/Users.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368528239962" ignored="false" />
@@ -101,7 +101,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="653" column="68" selection-start="28812" selection-end="28812" vertical-scroll-proportion="0.90144926">
+            <state line="653" column="92" selection-start="28836" selection-end="28836" vertical-scroll-proportion="0.90144926">
               <folding />
             </state>
           </provider>
@@ -890,7 +890,11 @@
       <created>1368570000960</created>
       <updated>1368570000960</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Images too close together.">
+      <created>1368570049934</created>
+      <updated>1368570049934</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -1137,7 +1141,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="653" column="68" selection-start="28812" selection-end="28812" vertical-scroll-proportion="0.90144926">
+        <state line="653" column="92" selection-start="28836" selection-end="28836" vertical-scroll-proportion="0.90144926">
           <folding />
         </state>
       </provider>
