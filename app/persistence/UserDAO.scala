@@ -10,9 +10,8 @@ class UserDAO extends DAO {
 
   def save(user: User): User = user.id match {
     case 0 => inTransaction { implicit session =>
-      val userEntry = new UserEntry(user)
-      insert(userEntry)
-      user.copy(id = userEntry.id)
+      insert(user)
+      user
     }
 
     case _ => inTransaction { implicit session =>
@@ -22,15 +21,21 @@ class UserDAO extends DAO {
   }
 
   def all: List[User] = inTransaction { implicit session =>
-    findAll().map(u => User(u.id, u.first_name, u.last_name)).toList
+    findAll().toList
   }
 
-  private lazy val insert = new Insert[UserEntry] {
+  private def userResultMap = new ResultMap[User] {
+    idArg(column = "id", javaType = T[Long])
+    arg(column = "first_name", javaType = T[String])
+    arg(column = "last_name", javaType = T[String])
+  }
+
+  private lazy val insert = new Insert[User] {
     keyGenerator = JdbcGeneratedKey(null, "id")
 
     def xsql = <xsql>
       insert into users (first_name, last_name)
-      values ({"first_name"?}, {"last_name"?})
+      values ({"firstName"?}, {"lastName"?})
     </xsql>
   }
 
@@ -42,23 +47,15 @@ class UserDAO extends DAO {
     </xsql>
   }
 
-  private lazy val findAll = new SelectList[UserEntry] {
+  private lazy val findAll = new SelectList[User] {
+    resultMap = userResultMap
+
     def xsql = "select id, first_name, last_name from users"
   }
 
-  private lazy val findById = new SelectOneBy[Long, UserEntry] {
+  private lazy val findById = new SelectOneBy[Long, User] {
+    resultMap = userResultMap
+
     def xsql = <xsql>select * from users where id = {"id"?}</xsql>
   }
-}
-
-class UserEntry(user: User) {
-  def this() = this(User(0, "", ""))
-
-  var id : Long = user.id
-
-  var first_name : String = user.firstName
-
-  var last_name : String = user.lastName
-
-  override def toString() = s"UserEntry [id: $id, firstName: $first_name, lastName: $last_name]"
 }

@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff423503-e9b4-4f2d-be36-190e1b06a8dd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/persistence/UserDAO.scala" afterPath="$PROJECT_DIR$/app/persistence/UserDAO.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="play-ajax-scala-mybatis-kissthinker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368570082538" ignored="false" />
+    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368639475842" ignored="false" />
     <file path="/UsersSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368531214634" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368635330170" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368635351262" ignored="false" />
     <file path="/User.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368448797063" ignored="false" />
     <file path="/fragment.java" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368539365397" ignored="false" />
     <file path="/Users.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368528239962" ignored="false" />
@@ -24,8 +26,8 @@
     <file path="/Application.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368432713723" ignored="false" />
     <file path="/WithChromeBrowser.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368634691232" ignored="false" />
     <file path="/UsersDAOSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368448876248" ignored="false" />
-    <file path="/UserDAOSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368487417484" ignored="false" />
-    <file path="/UserDAO.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368526466008" ignored="false" />
+    <file path="/UserDAOSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368638902517" ignored="false" />
+    <file path="/UserDAO.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368638775400" ignored="false" />
     <file path="/MyBatis.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368478707098" ignored="false" />
     <file path="/1.sql" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368526579054" ignored="false" />
     <file path="/2.sql" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368526659460" ignored="false" />
@@ -107,39 +109,26 @@
       <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="637" column="0" selection-start="27834" selection-end="27834" vertical-scroll-proportion="0.0">
+            <state line="659" column="108" selection-start="29454" selection-end="29454" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UserDAOSpec.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/persistence/UserDAOSpec.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="44" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAO.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/persistence/UserDAO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="61" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0">
+            <state line="40" column="34" selection-start="983" selection-end="983" vertical-scroll-proportion="0.371266">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntegrationSpec.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/IntegrationSpec.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="34" selection-start="604" selection-end="604" vertical-scroll-proportion="0.5078236">
-              <folding>
-                <element signature="e#14#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/web/package.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="84" selection-start="493" selection-end="510" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -162,8 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/project/Build.scala" />
-        <option value="$PROJECT_DIR$/app/controllers/Users.scala" />
         <option value="$PROJECT_DIR$/test/controllers/UsersSpec.scala" />
         <option value="$PROJECT_DIR$/app/views/coffee-script-scratchpad.scala.html" />
         <option value="$PROJECT_DIR$/public/coffee-script-scratchpad.html" />
@@ -172,12 +159,14 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/users.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/user.1.coffee" />
         <option value="$PROJECT_DIR$/app/views/main.scala.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test/util/package.scala" />
         <option value="$PROJECT_DIR$/test/util/WithChromeBrowser.scala" />
         <option value="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" />
         <option value="$PROJECT_DIR$/test/web/package.scala" />
         <option value="$PROJECT_DIR$/test/IntegrationSpec.scala" />
+        <option value="$PROJECT_DIR$/test/persistence/UserDAOSpec.scala" />
+        <option value="$PROJECT_DIR$/app/persistence/UserDAO.scala" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -422,10 +411,6 @@
               <option name="myItemId" value="persistence" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="UserDAO.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -537,7 +522,7 @@
       <recent name="C:\git\play-scala-mybatis-kissthinker\public" />
     </key>
   </component>
-  <component name="RunManager" selected="Specs2.UsersIntegrationSpec">
+  <component name="RunManager" selected="Specs2.UserDAOSpec">
     <configuration default="false" name="UsersSpec" type="Specs2RunConfiguration" factoryName="Specs2" temporary="true">
       <module name="play-scala-mybatis-kissthinker" />
       <setting name="path" value="controllers.UsersSpec" />
@@ -723,9 +708,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Specs2.UsersIntegrationSpec" />
-        <item index="1" class="java.lang.String" itemvalue="Specs2.UsersSpec" />
-        <item index="2" class="java.lang.String" itemvalue="Specs2.UserDAOSpec" />
+        <item index="0" class="java.lang.String" itemvalue="Specs2.UserDAOSpec" />
+        <item index="1" class="java.lang.String" itemvalue="Specs2.UsersIntegrationSpec" />
+        <item index="2" class="java.lang.String" itemvalue="Specs2.UsersSpec" />
         <item index="3" class="java.lang.String" itemvalue="Specs2.IntegrationSpec" />
         <item index="4" class="java.lang.String" itemvalue="Specs2.ApplicationSpec" />
       </list>
@@ -911,7 +896,11 @@
       <created>1368635336163</created>
       <updated>1368635336163</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Refactoring.">
+      <created>1368635357545</created>
+      <updated>1368635357545</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -936,7 +925,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -954,7 +943,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.6707819" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.55418384" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4458162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1053,28 +1042,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/play/play-2.1.1/repository/local/play/play-test_2.10/2.1.1/jars/play-test_2.10.jar!/play/api/test/TestBrowser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="362" selection-end="362" vertical-scroll-proportion="-2.04" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/coffee-script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="948" selection-start="199884" selection-end="199884" vertical-scroll-proportion="0.27101448" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/example.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="37" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/example-coffee.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="7" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Users.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.27419356" />
@@ -1101,20 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="637" column="0" selection-start="27834" selection-end="27834" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/persistence/UserDAO.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="61" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/application.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="57" selection-start="1215" selection-end="1256" vertical-scroll-proportion="0.371266">
@@ -1133,7 +1086,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/web/package.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="84" selection-start="493" selection-end="510" vertical-scroll-proportion="0.0">
+        <state line="8" column="6" selection-start="383" selection-end="383" vertical-scroll-proportion="0.19345662">
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -1142,10 +1095,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/IntegrationSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="604" selection-end="604" vertical-scroll-proportion="0.5078236">
+        <state line="15" column="93" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#14#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/play/play-2.1.0/repository/cache/org.mybatis.scala/mybatis-scala-core_2.10/jars/mybatis-scala-core_2.10-1.0.1.jar!/org/mybatis/scala/mapping/T.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="6" selection-start="352" selection-end="352" vertical-scroll-proportion="0.3371105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/play/play-2.1.0/repository/cache/org.mybatis.scala/mybatis-scala-core_2.10/jars/mybatis-scala-core_2.10-1.0.1.jar!/org/mybatis/scala/mapping/Statement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="40" selection-end="40" vertical-scroll-proportion="0.025073746">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/play/play-2.1.0/repository/cache/org.mybatis.scala/mybatis-scala-core_2.10/jars/mybatis-scala-core_2.10-1.0.1.jar!/org/mybatis/scala/mapping/SQLFunction1.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="40" selection-end="40" vertical-scroll-proportion="0.025073746">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/play/play-2.1.0/repository/cache/org.mybatis.scala/mybatis-scala-core_2.10/jars/mybatis-scala-core_2.10-1.0.1.jar!/org/mybatis/scala/mapping/Insert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="28" selection-start="62" selection-end="62" vertical-scroll-proportion="0.05">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="11" selection-start="27" selection-end="27" vertical-scroll-proportion="0.08994709">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/persistence/UserDAOSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="44" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="659" column="108" selection-start="29454" selection-end="29454" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/persistence/UserDAO.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="34" selection-start="983" selection-end="983" vertical-scroll-proportion="0.371266">
+          <folding />
         </state>
       </provider>
     </entry>
