@@ -698,3 +698,7 @@ class UserDAO extends DAO {
   }
 }
 ```
+
+A small "gotcha" in the above code.
+The "userResultMap" must be declared as "def" and not "val", as a "def" is resolved everytime (val is like a Java "final" and set only once).
+This gotcha is along the sames lines as having to use "lazy" on our "SQL" functionality.
