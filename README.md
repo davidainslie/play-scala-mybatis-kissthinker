@@ -653,13 +653,14 @@ Currently the UI is pretty naff, as shown by these screenshots, but as yet we've
 
 ![Alt Screenshot 1](/doc/screenshot1.png "Screenshot 1") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ![Alt Screenshot 2](/doc/screenshot2.png "Screenshot 2")
 
-Time to carry on coding.
+
+Time to carry on coding.<br/>
 As we last reached green I decided to do some refactoring, specifically UserDAO. I really hated that extra class "UserEntry".
 I went back to this class knowing that MyBatis has "result map" functionality, allowing up to, well map results to our domain object - so that is what I did.
 After the refactor, all specs were rerun to make sure that we were still green. Not only are we still green but now I like MyBatis once again.
 The code is clean/readable and we are in complete control of our SQL, which is kind of the point of MyBatis.
 
-And here is the current refactoring DAO in all its glory (excluding top level imports for conciseness of course):
+And here is the current refactored DAO in all its glory (excluding top level imports for conciseness of course):
 
 ```scala
 class UserDAO extends DAO {
