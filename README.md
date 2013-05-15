@@ -658,3 +658,41 @@ As we last reached green I decided to do some refactoring, specifically UserDAO.
 I went back to this class knowing that MyBatis has "result map" functionality, allowing up to, well map results to our domain object - so that is what I did.
 After the refactor, all specs were rerun to make sure that we were still green. Not only are we still green but now I like MyBatis once again.
 The code is clean/readable and we are in complete control of our SQL, which is kind of the point of MyBatis.
+
+And here is the current refactoring DAO in all its glory (excluding top level imports for conciseness of course):
+
+```scala
+class UserDAO extends DAO {
+  configuration ++= Seq(insert, findAll)
+
+  def save(user: User): User = inTransaction { implicit session =>
+    insert(user)
+    user
+  }
+
+  def all: List[User] = inTransaction { implicit session =>
+    findAll().toList
+  }
+
+  private def userResultMap = new ResultMap[User] {
+    idArg(column = "id", javaType = T[Long])
+    arg(column = "first_name", javaType = T[String])
+    arg(column = "last_name", javaType = T[String])
+  }
+
+  private lazy val insert = new Insert[User] {
+    keyGenerator = JdbcGeneratedKey(null, "id")
+
+    def xsql = <xsql>
+      insert into users (first_name, last_name)
+      values ({"firstName"?}, {"lastName"?})
+    </xsql>
+  }
+
+  private lazy val findAll = new SelectList[User] {
+    resultMap = userResultMap
+
+    def xsql = "select id, first_name, last_name from users"
+  }
+}
+```

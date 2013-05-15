@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ff423503-e9b4-4f2d-be36-190e1b06a8dd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/persistence/UserDAO.scala" afterPath="$PROJECT_DIR$/app/persistence/UserDAO.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="play-ajax-scala-mybatis-kissthinker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368639475842" ignored="false" />
+    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368639569186" ignored="false" />
     <file path="/UsersSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368531214634" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368635351262" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368639499343" ignored="false" />
     <file path="/User.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368448797063" ignored="false" />
     <file path="/fragment.java" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368539365397" ignored="false" />
     <file path="/Users.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368528239962" ignored="false" />
@@ -106,10 +105,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="659" column="108" selection-start="29454" selection-end="29454" vertical-scroll-proportion="0.0">
+            <state line="696" column="1" selection-start="30418" selection-end="30418" vertical-scroll-proportion="0.95072466">
               <folding />
             </state>
           </provider>
@@ -124,10 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UserDAO.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/persistence/UserDAO.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="34" selection-start="983" selection-end="983" vertical-scroll-proportion="0.371266">
+            <state line="25" column="29" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -165,8 +164,8 @@
         <option value="$PROJECT_DIR$/test/web/package.scala" />
         <option value="$PROJECT_DIR$/test/IntegrationSpec.scala" />
         <option value="$PROJECT_DIR$/test/persistence/UserDAOSpec.scala" />
-        <option value="$PROJECT_DIR$/app/persistence/UserDAO.scala" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/app/persistence/UserDAO.scala" />
       </list>
     </option>
   </component>
@@ -900,7 +899,11 @@
       <created>1368635357545</created>
       <updated>1368635357545</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Refactoring.">
+      <created>1368639505543</created>
+      <updated>1368639505543</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -1144,16 +1147,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/app/persistence/UserDAO.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="659" column="108" selection-start="29454" selection-end="29454" vertical-scroll-proportion="0.0">
+        <state line="25" column="29" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/persistence/UserDAO.scala">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="34" selection-start="983" selection-end="983" vertical-scroll-proportion="0.371266">
+        <state line="696" column="1" selection-start="30418" selection-end="30418" vertical-scroll-proportion="0.95072466">
           <folding />
         </state>
       </provider>
