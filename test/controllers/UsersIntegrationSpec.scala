@@ -1,8 +1,8 @@
 package controllers
 
 import org.specs2.mutable.Specification
-import util.WithChromeBrowser
 import java.util.concurrent.TimeUnit
+import web.WithChromeBrowser
 
 class UsersIntegrationSpec extends Specification {
   "User" should {
