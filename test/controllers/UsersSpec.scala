@@ -3,7 +3,7 @@ package controllers
 import org.specs2.mutable.Specification
 import play.api.test.Helpers._
 import play.api.http.HeaderNames
-import play.api.test.{WithApplication, WithServer, FakeRequest}
+import play.api.test.{WithServer, FakeRequest}
 import models.User
 
 class UsersSpec extends Specification {
@@ -23,6 +23,13 @@ class UsersSpec extends Specification {
 
       user.id mustEqual 1
     }
+
+    /*"get an error message for a non existing user request" {
+      val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
+      val result = Users.user(-1)(request)
+
+      pending
+    }*/
 
     "view all users" in new WithServer {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")

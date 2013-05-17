@@ -24,5 +24,13 @@ class UserDAOSpec extends Specification {
                          User(2, "John", "Lennon"),
                          User(1, "Paul", "McCartney")).only
     }
+
+    "not find non-existing User for an invalid ID" in new WithServer {
+      new UserDAO().find(-1) must beNone
+    }
+
+    "find user by ID" in new WithServer {
+      new UserDAO().find(1) must beSome(User(1, "Paul", "McCartney"))
+    }
   }
 }

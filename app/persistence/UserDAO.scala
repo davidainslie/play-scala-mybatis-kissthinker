@@ -24,6 +24,10 @@ class UserDAO extends DAO {
     findAll().toList
   }
 
+  def find(id: Long): Option[User] = inTransaction { implicit session =>
+    findById(id)
+  }
+
   private def userResultMap = new ResultMap[User] {
     idArg(column = "id", javaType = T[Long])
     arg(column = "first_name", javaType = T[String])

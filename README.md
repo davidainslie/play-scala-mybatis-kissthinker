@@ -702,3 +702,58 @@ class UserDAO extends DAO {
 A small "gotcha" in the above code.
 The "userResultMap" must be declared as "def" and not "val", as a "def" is resolved everytime (val is like a Java "final" and set only once).
 This gotcha is along the sames lines as having to use "lazy" on our "SQL" functionality.
+
+We still have a piece of hard coding - get user 1. After sorting this one out we can handle the case of saving/updating an existing user.
+Let's update UserDAOSpec to find a user given the ID (something that we shall later confine to only "admin" functionality).
+
+We'll need two new examples - cannot find non-existing user, and find an existing user.
+Doesn't matter which we choose first, but often it is the failing case i.e. the next code snippet can be:
+
+```scala
+"UserDAO" should {
+  // ...
+
+  "not find non-existing User for an invalid ID" in new WithServer {
+    new UserDAO().find(-1) must beNone
+  }
+}
+```
+
+And we are red... well, as usual because of a compilation error.
+We initially fix that with a hard coded implementation of course.
+However, this one will immediately give green (going against the rules of a genuine red after successful compilation - but there are just no two ways to this first hardcoding, so let's live with it).
+
+```scala
+def find(id: Long): Option[User] = None
+```
+
+But now for the passing example:
+
+```scala
+"UserDAO" should {
+  // ...
+
+  "find user by ID" in new WithServer {
+    new UserDAO().find(1) must beSome(User(1, "Paul", "McCartney"))
+  }
+}
+```
+
+Aha! Genuine red (because of a code break - our hardcoding, and as mentioned, hardcoding is always factored out when more examples are added).
+The new implemenation needs some more of the MyBatis/SQL stuff:
+
+```scala
+  def find(id: Long): Option[User] = inTransaction { implicit session =>
+    findById(id)
+  }
+
+  private lazy val findById = new SelectOneBy[Long, User] {
+    resultMap = userResultMap
+
+    def xsql = <xsql>select * from users where id = {"id"?}</xsql>
+  }
+```
+
+Hopefully you'll getting used to what's going on, and at the same time understanding how to use MyBatis with Scala. It is now looking easy. Will it stay that when is comes to relationships?
+
+Let's now update the UsersSpec to really find user 1. We are going to achieve this by adding a new failing example i.e. request to find a non-existing user.
