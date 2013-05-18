@@ -13,8 +13,17 @@ body {
     right: 5px;
     border-radius: 10px 10px 10px 10px;
     background-color: black;
+    padding: 20px;
 }
 
 #nav {
     margin: 5px;
+}
+
+form {
+    color: white;
+}
+
+form > legend {
+    color: white;
 }

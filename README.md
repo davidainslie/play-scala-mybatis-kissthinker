@@ -613,22 +613,20 @@ Ah! Good! Readable again. And here are the two new CoffeeScript files, which are
 To get all users (as JSON) and process:
 
 ```javascript
-$("#users").bind "click", (event) =>
-    $ ->
-        $.get "/users", (users) ->
-            $("#content").html("<ul id='usersList' style='color: white'></ul>")
+$("#users").click ->
+    $.get "/users", (users) ->
+        $("#content").html("<ul id='usersList' style='color: white'></ul>")
 
-            $.each users, (index, user) ->
-                $("#usersList").append("<li>#{user.id}, #{user.firstName}, #{user.lastName}</li>")
+        $.each users, (index, user) ->
+            $("#usersList").append("<li>#{user.id}, #{user.firstName}, #{user.lastName}</li>")
 ```
 
 To get user with ID 1 (as JSON) and process:
 
 ```javascript
-$("#user1").bind "click", (event) =>
-    $ ->
-        $.get "/users/1", (user) ->
-            $("#content").html("<h3 style='color: white'>User ID: #{user.id}</h3>")
+$("#user1").click ->
+    $.get "/users/1", (user) ->
+        $("#content").html("<h3 style='color: white'>User ID: #{user.id}</h3>")
 ```
 
 With all the above spec/examples/implementation in place, maybe we should try running the application and interact with a browser?
@@ -841,3 +839,58 @@ object Users extends Controller with User.JSON {
 ```
 
 (Note that with this new implementation, we could also update the example "view a user profile" to be more specific in its assertion).
+
+Regarding this new story (find/search a user) we finally arrive at UsersIntegrationSpec.
+What we really want, is a search form. We shall fill this in the spec, but let's see how the form should look, after all the UI is currently a load of ****.
+We shall carry on using CoffeeScript to put together the form. This is quite an interesting one, as we can construct all HTML on multiple lines, but be careful, just like the likes of Python, CoffeeScript is sensitive to indentation (preferring indentation over semi-colons).
+
+Our first (what could be regarded as hardcoded) version simply gives a first draft of how we think the form will look like including:
+<ul>
+    <li>Quick improvements to the look and feel (as shown in the below screenshots).</li>
+    <li>Use of Twitter Bootstrap's form style with minor overrides.</li>
+    <li>Currently assuming that anyone can search by ID, but later on this will be changed so that this input field is only viewable by "admin".</li>
+    <li>The filter... well as yet, that is ad-hoc and will probably be based on regex - with the optional "case sensitive" checkbox.</li>
+</ul>
+
+So, the new CoffeeScript, userSearch.coffee looks like:
+
+```javascript
+$("#userSearch").click ->
+    $("#content").html """
+        <form class="form-horizontal">
+            <legend>User Search</legend>
+
+            <div class="control-group">
+                <label class="control-label" for="id">ID</label>
+
+                <div class="controls">
+                    <input type="text" id="id" placeholder="ID">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="filter">Filter</label>
+
+                <div class="controls">
+                    <input type="password" id="filter" placeholder="Filter">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox"> Case Sensitive
+                    </label>
+
+                    <button type="submit" class="btn">Search</button>
+                </div>
+            </div>
+        </form>
+        """
+```
+
+Very nice. We have written standard HTML, and when the time comes (when clicking "User Search") our single page web application dynamically updates the document.
+
+And and couple of screenshot updates:
+
+![Alt Screenshot 1](/doc/screenshot-a1.png "Screenshot 1") &nbsp; &nbsp; ![Alt Screenshot 2](/doc/screenshot-a2.png "Screenshot 2") &nbsp; &nbsp; ![Alt Screenshot 3](/doc/screenshot-a3.png "Screenshot 3")
