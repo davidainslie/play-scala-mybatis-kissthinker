@@ -7,9 +7,9 @@
     </list>
     <ignored path="play-ajax-scala-mybatis-kissthinker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368919503396" ignored="false" />
+    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368919925939" ignored="false" />
     <file path="/UsersSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368911392257" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368919451360" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368919582590" ignored="false" />
     <file path="/User.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368909567505" ignored="false" />
     <file path="/fragment.java" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368539365397" ignored="false" />
     <file path="/Users.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368911287245" ignored="false" />
@@ -113,7 +113,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="657" column="46" selection-start="28820" selection-end="28820" vertical-scroll-proportion="0.7157895">
+            <state line="895" column="96" selection-start="37350" selection-end="37350" vertical-scroll-proportion="0.6421053">
               <folding />
             </state>
           </provider>
@@ -1001,7 +1001,11 @@
       <created>1368919454884</created>
       <updated>1368919454884</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Wording.">
+      <created>1368919584868</created>
+      <updated>1368919584868</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -1095,7 +1099,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Additions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wording." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1109,7 +1113,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="New example: &quot;view all users&quot;." />
     <MESSAGE value="Missed a forward slash." />
     <MESSAGE value="Documentation code highlighting." />
     <MESSAGE value="Real DAO code for saving." />
@@ -1134,6 +1137,7 @@
     <MESSAGE value="Find by ID more specific with refactoring." />
     <MESSAGE value="User search form." />
     <MESSAGE value="Additions." />
+    <MESSAGE value="Wording." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1252,7 +1256,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="657" column="46" selection-start="28820" selection-end="28820" vertical-scroll-proportion="0.7157895">
+        <state line="895" column="96" selection-start="37350" selection-end="37350" vertical-scroll-proportion="0.6421053">
           <folding />
         </state>
       </provider>

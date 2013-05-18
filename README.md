@@ -891,7 +891,9 @@ $("#userSearch").click ->
         """
 ```
 
-Very nice. We have written standard HTML, and when the time comes (when clicking "User Search") our single page web application dynamically updates the document.
+Very nice!
+We have written standard HTML, and when the time comes (when clicking "User Search") our single page web application dynamically updates the document.
+And the triple quotes, along with functional style, all looks a bit kind of Scala... even nicer!
 
 And a few screenshot updates:
 
