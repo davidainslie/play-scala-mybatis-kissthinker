@@ -757,3 +757,87 @@ The new implemenation needs some more of the MyBatis/SQL stuff:
 Hopefully you'll getting used to what's going on, and at the same time understanding how to use MyBatis with Scala. It is now looking easy. Will it stay that when is comes to relationships?
 
 Let's now update the UsersSpec to really find user 1. We are going to achieve this by adding a new failing example i.e. request to find a non-existing user.
+However, once again, since we are green we can refactor (and re-run all specs).
+
+Our UsersSpec has quite a bit of repetition regarding firstly asserting that we are getting JSON formatted data i.e.
+
+```scala
+status(result) mustEqual OK
+contentType(result) must beSome("application/json")
+charset(result) must beSome("utf-8")
+```
+
+and secondly parsing said JSON into a domain object i.e.
+
+```scala
+import play.api.libs.json.Json
+implicit val userFormat = Json.format[User]
+
+val user = Json.parse(contentAsString(result)).as[User]
+```
+
+The first case can be amended with the new "matcher" (that can be mixed into UsersSpec):
+
+```scala
+trait JSONMatcher extends Specification {
+  implicit def resultToJSONMatcher(result: Result) = new JSONMatcher(result)
+
+  class JSONMatcher(result: Result) {
+    def isJSON = {
+      status(result) mustEqual OK
+      contentType(result) must beSome("application/json")
+      charset(result) must beSome("utf-8")
+    }
+  }
+}
+```
+
+and the second case with another trait for mixing in:
+
+```scala
+object User {
+  trait JSON {
+    import play.api.libs.json.Json
+
+    implicit val format = Json.format[User]
+
+    def parse(json: String) = Json.parse(json)
+  }
+}
+```
+
+Now let's add our new example, also showing the use of the above two new traits:
+
+```scala
+class UsersSpec extends Specification with JSONMatcher with User.JSON {
+  "User" should {
+    // ...
+
+    "get an error for a non existing user request" in new WithServer {
+      val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
+      val result = Users.user(-1)(request)
+
+      status(result) mustEqual NOT_FOUND
+    }
+```
+
+To get green we need to update the Users controller.
+And while we're at it, why not update the Users controller to also have User.JSON mixed in to again removed redundant/boilerplate code:
+
+```scala
+object Users extends Controller with User.JSON {
+  def users = Action {
+    val users = new UserDAO().all
+    Ok(toJson(users))
+  }
+
+  def user(id: Long) = Action {
+    new UserDAO().find(id) match {
+      case Some(u: User) => Ok(toJson(u))
+      case _ => NotFound
+    }
+  }
+}
+```
+
+(Note that with this new implementation, we could also update the example "view a user profile" to be more specific in its assertion).

@@ -6,18 +6,16 @@ import models.User
 import play.api.libs.json.Json
 import persistence.UserDAO
 
-object Users extends Controller {
+object Users extends Controller with User.JSON {
   def users = Action {
-    implicit val userFormat = format[User]
-
     val users = new UserDAO().all
     Ok(toJson(users))
   }
 
   def user(id: Long) = Action {
-    implicit val userFormat = format[User]
-
-    val user = User(1)
-    Ok(toJson(user))
+    new UserDAO().find(id) match {
+      case Some(u: User) => Ok(toJson(u))
+      case _ => NotFound
+    }
   }
 }

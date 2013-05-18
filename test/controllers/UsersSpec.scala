@@ -5,44 +5,33 @@ import play.api.test.Helpers._
 import play.api.http.HeaderNames
 import play.api.test.{WithServer, FakeRequest}
 import models.User
+import json.JSONMatcher
 
-class UsersSpec extends Specification {
+class UsersSpec extends Specification with JSONMatcher with User.JSON {
   "User" should {
     "view a user profile" in new WithServer {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
       val result = Users.user(1)(request)
+      result isJSON
 
-      status(result) mustEqual OK
-      contentType(result) must beSome("application/json")
-      charset(result) must beSome("utf-8")
+      val user = parse(contentAsString(result)).as[User]
 
-      import play.api.libs.json.Json
-      implicit val userFormat = Json.format[User]
-
-      val user = Json.parse(contentAsString(result)).as[User]
-
-      user.id mustEqual 1
+      user mustEqual User(1, "Paul", "McCartney")
     }
 
-    /*"get an error message for a non existing user request" {
+    "get an error for a non existing user request" in new WithServer {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
       val result = Users.user(-1)(request)
 
-      pending
-    }*/
+      status(result) mustEqual NOT_FOUND
+    }
 
     "view all users" in new WithServer {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
       val result = Users.users()(request)
+      result isJSON
 
-      status(result) mustEqual OK
-      contentType(result) must beSome("application/json")
-      charset(result) must beSome("utf-8")
-
-      import play.api.libs.json.Json
-      implicit val userFormat = Json.format[User]
-
-      val users = Json.parse(contentAsString(result)).as[List[User]]
+      val users = parse(contentAsString(result)).as[List[User]]
 
       users.size mustEqual 4
     }
@@ -50,10 +39,7 @@ class UsersSpec extends Specification {
     "view all JSON users" in new WithServer {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
       val result = Users.users()(request)
-
-      status(result) mustEqual OK
-      contentType(result) must beSome("application/json")
-      charset(result) must beSome("utf-8")
+      result isJSON
 
       val users = contentAsString(result)
 
