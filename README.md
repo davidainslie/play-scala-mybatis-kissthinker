@@ -649,7 +649,9 @@ So I opened up the relevant HTML page; added a style for white text; refreshed t
 
 Currently the UI is pretty naff, as shown by these screenshots, but as yet we've not really spent much time here - we'll get there.
 
-![Alt Screenshot 1](/doc/screenshot1.png "Screenshot 1") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ![Alt Screenshot 2](/doc/screenshot2.png "Screenshot 2")
+![Alt Screenshot 1](/doc/screenshot1.png "Screenshot 1")
+
+![Alt Screenshot 2](/doc/screenshot2.png "Screenshot 2")
 
 <p/>
 Time to carry on coding.
@@ -891,6 +893,10 @@ $("#userSearch").click ->
 
 Very nice. We have written standard HTML, and when the time comes (when clicking "User Search") our single page web application dynamically updates the document.
 
-And and couple of screenshot updates:
+And a few screenshot updates:
 
-![Alt Screenshot 1](/doc/screenshot-a1.png "Screenshot 1") &nbsp; &nbsp; ![Alt Screenshot 2](/doc/screenshot-a2.png "Screenshot 2") &nbsp; &nbsp; ![Alt Screenshot 3](/doc/screenshot-a3.png "Screenshot 3")
+![Alt Screenshot 1](/doc/screenshot-a1.png "Screenshot 1")
+
+![Alt Screenshot 2](/doc/screenshot-a2.png "Screenshot 2")
+
+![Alt Screenshot 3](/doc/screenshot-a3.png "Screenshot 3")
