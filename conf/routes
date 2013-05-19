@@ -5,6 +5,8 @@
 # Home page
 GET     /                           controllers.Application.index
 
+GET     /users/search               controllers.Users.search
+
 GET     /users                      controllers.Users.users
 
 GET     /users/:id                  controllers.Users.user(id: Long)

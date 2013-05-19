@@ -902,3 +902,69 @@ And a few screenshot updates:
 ![Alt Screenshot 2](/doc/screenshot-a2.png "Screenshot 2")
 
 ![Alt Screenshot 3](/doc/screenshot-a3.png "Screenshot 3")
+
+Before proceeding, let's refactor. Even though the last CoffeeScript was a nice proof of concept, it is not the most concise (and testable) way of using Ajax.
+So we shall extract out the "form" into its own HTML file (which allows up to directly open this new page to easily view it).
+As we are in the Play world, we shall actually extract into a file of type ".scala.html" which allows the new HTML file to be compiled into a Scala function (which is what Play does - check out their website).
+Being a ".scala.html" file, we place it under the "views" directory instead of the "public" directory, and then to access the file (within the Play world) we have to add a new route in "routes".
+
+Ok, enough chit-chat, here are the refactorings (including moving files around into new directories to keep things clean):
+
+The above CoffeeScript now becomes (and renaming to search.coffee user directory "user"):
+
+```javascript
+$("#userSearch").click ->
+    $("#content").load "/users/search"
+```
+
+Nice! The load itself is picked up by our new route:
+
+```scala
+GET     /users/search               controllers.Users.search
+```
+
+which is essentially mapped to the new "search" method in Users:
+
+```scala
+def search = Action {
+  Ok(views.html.user.search())
+}
+```
+
+And finally, the extracted HTML form is now in "search.scala.html" (where the file starts as a function declaration i.e. the part "@()" meaning it is a parameterless function):
+
+```html
+@()
+
+<form class="form-horizontal">
+    <legend>User Search</legend>
+
+    <div class="control-group">
+        <label class="control-label" for="id">ID</label>
+
+        <div class="controls">
+            <input type="text" id="id" placeholder="ID">
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="filter">Filter</label>
+
+        <div class="controls">
+            <input type="password" id="filter" placeholder="Filter">
+        </div>
+    </div>
+
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox">
+                <input type="checkbox"> Case Sensitive
+            </label>
+
+            <button type="submit" class="btn">Search</button>
+        </div>
+    </div>
+</form>
+```
+
+Run all specs/examples to check on the refactoring.

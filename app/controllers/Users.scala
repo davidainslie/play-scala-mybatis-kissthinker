@@ -7,6 +7,10 @@ import play.api.libs.json.Json
 import persistence.UserDAO
 
 object Users extends Controller with User.JSON {
+  def search = Action {
+    Ok(views.html.user.search())
+  }
+
   def users = Action {
     val users = new UserDAO().all
     Ok(toJson(users))
