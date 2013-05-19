@@ -544,16 +544,16 @@ As for the actual "browser" spec, we again want to view all users and expect the
 
 ```scala
 "view all users" in new WithChromeBrowser {
-  browser.goTo("/")
-  browser.title() mustEqual "Home"
-  browser.click("#usersButtonGroup")
-  browser.click("#users")
+  browser goTo "/"
+  browser title() mustEqual "Home"
+  browser click "#usersButtonGroup"
+  browser click "#users"
 
   browser.waitUntil[Boolean](3, TimeUnit.SECONDS) {
-    browser.pageSource contains "Lennon"
+    browser pageSource() contains "Lennon"
   }
 
-  browser.find("#usersList").getText contains "2, John, Lennon"
+  browser find "#usersList" getText() must contain("2, John, Lennon")
 }
 ```
 
@@ -968,3 +968,7 @@ And finally, the extracted HTML form is now in "search.scala.html" (where the fi
 ```
 
 Run all specs/examples to check on the refactoring.
+
+At this time, the search form doesn't do anything yet. Lately we have been "visual", but we should get back to BDD.
+The visual part was essentially hardcoded - on a web project you are often given a hardcoded piece of HTML from a "page designer" and now we must implement.
+Finally, we can get back to updating and adding a new example in UsersIntegrationSpec.

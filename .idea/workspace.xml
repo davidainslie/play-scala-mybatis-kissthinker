@@ -3,21 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="ff423503-e9b4-4f2d-be36-190e1b06a8dd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" afterPath="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/main.css" afterPath="$PROJECT_DIR$/public/stylesheets/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user/search.scala.html" afterPath="$PROJECT_DIR$/app/views/user/search.scala.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/user/users.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/user/users.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="play-ajax-scala-mybatis-kissthinker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368994505619" ignored="false" />
+    <file path="/README.md" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368995300790" ignored="false" />
     <file path="/UsersSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368911392257" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368970868874" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368994521298" ignored="false" />
     <file path="/User.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368909567505" ignored="false" />
     <file path="/fragment.java" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368539365397" ignored="false" />
     <file path="/Users.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368968854563" ignored="false" />
-    <file path="/routes" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368968578939" ignored="false" />
-    <file path="/UsersIntegrationSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368538938408" ignored="false" />
+    <file path="/routes" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1369000464193" ignored="false" />
+    <file path="/UsersIntegrationSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1369003347710" ignored="false" />
     <file path="/main.scala.html" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368969073475" ignored="false" />
     <file path="/a.dummy" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368539492743" ignored="false" />
-    <file path="/main.css" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368918171032" ignored="false" />
+    <file path="/main.css" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1369001188426" ignored="false" />
     <file path="/index.scala.html" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368434024884" ignored="false" />
     <file path="/ApplicationSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368434662739" ignored="false" />
     <file path="/IntegrationSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368635167609" ignored="false" />
@@ -37,7 +43,7 @@
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/controllers/routes.java" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368539489837" ignored="false" />
     <file path="/coffee-script-scratchpad.html" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368543814540" ignored="false" />
     <file path="/scratchpad.coffee" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368547199706" ignored="false" />
-    <file path="/users.coffee" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368565561401" ignored="false" />
+    <file path="/users.coffee" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1369001262881" ignored="false" />
     <file path="$PROJECT_DIR$/../play-scala-mongo-casbah-salat-kissthinker/test/ModelSpec.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368572585720" ignored="false" />
     <file path="$PROJECT_DIR$/../play-scala-mongo-casbah-salat-kissthinker/project/Build.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368573223942" ignored="false" />
     <file path="$PROJECT_DIR$/../play-scala-mongo-casbah-salat-kissthinker/conf/play.plugins" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368573279737" ignored="false" />
@@ -51,6 +57,7 @@
     <file path="/JSONFormat.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368908112835" ignored="false" />
     <file path="/userSearch.coffee" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368968516988" ignored="false" />
     <file path="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/main.template.scala" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1368969223767" ignored="false" />
+    <file path="/search.scala.html" changelist="ff423503-e9b4-4f2d-be36-190e1b06a8dd" time="1369001090914" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,10 +118,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="859" column="39" selection-start="36114" selection-end="36114" vertical-scroll-proportion="0.38115942">
+            <state line="545" column="0" selection-start="23990" selection-end="23990" vertical-scroll-proportion="10.28">
               <folding />
             </state>
           </provider>
@@ -123,7 +130,7 @@
       <file leaf-file-name="Users.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Users.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="203" selection-end="263" vertical-scroll-proportion="0.0">
+            <state line="15" column="22" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,10 +145,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersIntegrationSpec.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UsersIntegrationSpec.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="6" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+            <state line="22" column="63" selection-start="704" selection-end="704" vertical-scroll-proportion="0.7657658">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/user/search.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="64" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,28 +172,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/user/search.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="50" selection-start="0" selection-end="64" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/routes">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="170" selection-end="230" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="search.scala.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/user/search.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="49" selection-start="0" selection-end="772" vertical-scroll-proportion="-12.423077">
+            <state line="4" column="33" selection-start="56" selection-end="56" vertical-scroll-proportion="-2.6153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/user/users.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="10" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -201,22 +208,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test/json/JSONMatcher.scala" />
-        <option value="$PROJECT_DIR$/app/json/JSON.scala" />
-        <option value="$PROJECT_DIR$/app/json/JSONFormat.scala" />
         <option value="$PROJECT_DIR$/app/models/User.scala" />
         <option value="$PROJECT_DIR$/test/controllers/UsersSpec.scala" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/user-search.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/users.coffee" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/user.1.coffee" />
-        <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
-        <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/userSearch.coffee" />
         <option value="$PROJECT_DIR$/app/views/userSearch.scala.html" />
         <option value="$PROJECT_DIR$/app/controllers/Users.scala" />
         <option value="$PROJECT_DIR$/app/controllers/Application.scala" />
         <option value="$PROJECT_DIR$/app/views/main.scala.html" />
+        <option value="$PROJECT_DIR$/conf/routes" />
+        <option value="$PROJECT_DIR$/app/views/user/search.scala.html" />
+        <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/user/users.coffee" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala" />
       </list>
     </option>
   </component>
@@ -622,7 +629,7 @@
       <recent name="C:\git\play-scala-mybatis-kissthinker\public" />
     </key>
   </component>
-  <component name="RunManager" selected="Specs2.UsersSpec">
+  <component name="RunManager" selected="Specs2.UsersIntegrationSpec">
     <configuration default="false" name="UsersSpec" type="Specs2RunConfiguration" factoryName="Specs2" temporary="true">
       <module name="play-scala-mybatis-kissthinker" />
       <setting name="path" value="controllers.UsersSpec" />
@@ -808,9 +815,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Specs2.UsersSpec" />
-        <item index="1" class="java.lang.String" itemvalue="Specs2.UserDAOSpec" />
-        <item index="2" class="java.lang.String" itemvalue="Specs2.UsersIntegrationSpec" />
+        <item index="0" class="java.lang.String" itemvalue="Specs2.UsersIntegrationSpec" />
+        <item index="1" class="java.lang.String" itemvalue="Specs2.UsersSpec" />
+        <item index="2" class="java.lang.String" itemvalue="Specs2.UserDAOSpec" />
         <item index="3" class="java.lang.String" itemvalue="Specs2.IntegrationSpec" />
         <item index="4" class="java.lang.String" itemvalue="Specs2.ApplicationSpec" />
       </list>
@@ -1052,7 +1059,11 @@
       <created>1368970874826</created>
       <updated>1368970874826</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Improved markdown.">
+      <created>1368994525204</created>
+      <updated>1368994525204</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -1096,8 +1107,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.6707819" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4458162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.64471877" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3552812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -1146,7 +1157,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use of ```coffeescript." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved markdown." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1160,7 +1171,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Documentation code highlighting." />
     <MESSAGE value="Real DAO code for saving." />
     <MESSAGE value="Formatting." />
     <MESSAGE value="Refactor of MyBatis to DAO, and UserDAO" />
@@ -1185,6 +1195,7 @@
     <MESSAGE value="Documentation." />
     <MESSAGE value="Refactoring." />
     <MESSAGE value="Use of ```coffeescript." />
+    <MESSAGE value="Improved markdown." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1194,23 +1205,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/play/play-2.1.1/repository/local/play/play_2.10/2.1.1/jars/play_2.10.jar!/play/api/http/Status.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="6" selection-start="239" selection-end="239" vertical-scroll-proportion="-0.25073746" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/json/JSONMatcher.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="119" selection-end="119" vertical-scroll-proportion="0.14509246" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/persistence/UserDAO.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="6" selection-start="469" selection-end="469" vertical-scroll-proportion="0.34708393">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/persistence/UserDAOSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="69" selection-start="1132" selection-end="1173" vertical-scroll-proportion="0.7254623">
@@ -1221,20 +1215,6 @@
     <entry file="file://$PROJECT_DIR$/test/controllers/UsersSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="17" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="6" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1253,9 +1233,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/play/play-2.1.0/repository/local/org.specs2/specs2_2.10/1.13/jars/specs2_2.10.jar!/org/specs2/matcher/MustExpectable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="6" selection-start="253" selection-end="253" vertical-scroll-proportion="0.07522124">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Users.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/user/search.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="33" selection-start="56" selection-end="56" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="17" selection-start="357" selection-end="357" vertical-scroll-proportion="0.628734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/routes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="68" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/user/search.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="64" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/user/users.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="167" selection-end="167" vertical-scroll-proportion="0.09672831">
+        <state line="1" column="10" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.7.0_09/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2074" column="19" selection-start="81746" selection-end="81746" vertical-scroll-proportion="0.47965115">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/play/play-2.1.0/repository/local/org.fluentlenium/fluentlenium-core/0.7.3/jars/fluentlenium-core.jar!/org/fluentlenium/core/Fluent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="161" selection-start="2604" selection-end="2639" vertical-scroll-proportion="-4.56">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="545" column="0" selection-start="23990" selection-end="23990" vertical-scroll-proportion="10.28">
           <folding />
         </state>
       </provider>
@@ -1267,37 +1310,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/user/search.coffee">
+    <entry file="file://$PROJECT_DIR$/test/controllers/UsersIntegrationSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="50" selection-start="0" selection-end="64" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/routes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="170" selection-end="230" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Users.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="203" selection-end="263" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user/search.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="49" selection-start="0" selection-end="772" vertical-scroll-proportion="-12.423077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="859" column="39" selection-start="36114" selection-end="36114" vertical-scroll-proportion="0.38115942">
+        <state line="22" column="63" selection-start="704" selection-end="704" vertical-scroll-proportion="0.7657658">
           <folding />
         </state>
       </provider>

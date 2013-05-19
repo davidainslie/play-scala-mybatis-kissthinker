@@ -24,6 +24,6 @@ form {
     color: white;
 }
 
-form > legend {
+form > fieldset > legend {
     color: white;
 }

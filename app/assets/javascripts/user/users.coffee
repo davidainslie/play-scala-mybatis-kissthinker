@@ -1,5 +1,5 @@
 $("#users").click ->
-    $.get "/users", (users) ->
+    $.post "/users", (users) ->
         $("#content").html("<ul id='usersList' style='color: white'></ul>")
 
         $.each users, (index, user) ->
