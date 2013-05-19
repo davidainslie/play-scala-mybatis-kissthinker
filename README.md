@@ -1,9 +1,9 @@
-Front to back (simple demo) application showing how to use/approach the following:
+Front to back demo/tutorial application showing how to use/approach the following:
 
 <ul>
 	<li>Scala (version 2.10.1)</li>
 	<li>Play (2.1.1)</li>
-	<li>Web technologies including Ajax, JavaScript, JQuery, Twitter Bootstrap, HTML, CSS and some CoffeesScript</li>
+	<li>Web technologies including Ajax, JavaScript and CoffeeScript, JQuery, Twitter Bootstrap, HTML, CSS</li>
 	<li>BDD with Specs2 1.13</li>
 	<li>BDD (Scala/Play) web application with FluentLenium (0.8.0)</li>
 	<li>MyBatis (using mybatis-scala-core version 1.0.1)</li>
@@ -41,11 +41,11 @@ A user can edit their own profile - An administrator is given the option to dele
 So how does it all fit together?
 Let's rewind to when I started the application with BDD.
 
-A first story: User should view a (some) user's profile.
+A first story: User should view a/some user's profile.
 What this entails, is to find the appropriate user, let's start with the usual, looking up by ID.
 The user (object) will be stored in some datastore (for our unit specs, which are pretty much the same as unit test we shall use the H2 "in memory" database that is configured in Play.
-Our first example (essentially a test method) could assert against a "get" method on a "user DAO", but that has been done a million times before.
-We shall dive in with an example that actually goes through Play, specifically, when a request comes into the application, the first port of call is a Controller (think of this as a fine-grained Servlet).
+Our first example (essentially a test method) could assert against a "get" method on a "user DAO", but that is kind of the norm, so we'll save that for later.
+We shall instead dive in with an example that actually goes through Play, specifically, when a request comes into the application, the first port of call is a Controller (think of this as a fine-grained Servlet).
 
 So, the first spec and example to request for user with ID of 1, and assert that the result is a JSON representation of User, which has ID of 1:
 
@@ -612,7 +612,7 @@ Ah! Good! Readable again. And here are the two new CoffeeScript files, which are
 
 To get all users (as JSON) and process:
 
-```javascript
+```coffeescript
 $("#users").click ->
     $.get "/users", (users) ->
         $("#content").html("<ul id='usersList' style='color: white'></ul>")
@@ -623,7 +623,7 @@ $("#users").click ->
 
 To get user with ID 1 (as JSON) and process:
 
-```javascript
+```coffeescript
 $("#user1").click ->
     $.get "/users/1", (user) ->
         $("#content").html("<h3 style='color: white'>User ID: #{user.id}</h3>")
@@ -856,7 +856,7 @@ Our first (what could be regarded as hardcoded) version simply gives a first dra
 
 So, the new CoffeeScript, userSearch.coffee looks like:
 
-```javascript
+```coffeescript
 $("#userSearch").click ->
     $("#content").html """
         <form class="form-horizontal">
