@@ -912,7 +912,7 @@ Ok, enough chit-chat, here are the refactorings (including moving files around i
 
 The above CoffeeScript now becomes (and renaming to search.coffee user directory "user"):
 
-```javascript
+```coffeescript
 $("#userSearch").click ->
     $("#content").load "/users/search"
 ```
