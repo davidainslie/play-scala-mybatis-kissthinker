@@ -1011,6 +1011,7 @@ $ ->
 
 Hopefully you will find this fairly interesting! What is it all about?
 The function within the post i.e. after the third "->", is code I've just copied from getting all the users.
+Note that the actual "post" involves; where to post to, so we get the "action" from the declared form; serialize all the form field data.
 So that just leaves a few others lines to discuss.
 The very first "$ ->" is the CoffeeScript version of the jQuery "ready document" i.e. what to do upon form/page load.
 Next we attach a function (the post) to the "form submission".
