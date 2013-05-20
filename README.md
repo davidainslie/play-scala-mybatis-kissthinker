@@ -972,3 +972,46 @@ Run all specs/examples to check on the refactoring.
 At this time, the search form doesn't do anything yet. Lately we have been "visual", but we should get back to BDD.
 The visual part was essentially hardcoded - on a web project you are often given a hardcoded piece of HTML from a "page designer" and now we must implement.
 Finally, we can get back to updating and adding a new example in UsersIntegrationSpec.
+
+We add the following new example:
+
+```scala
+"be informed of non-existing user" in new WithChromeBrowser {
+  browser goTo "/"
+  browser title() mustEqual "Home"
+  browser click "#usersButtonGroup"
+  browser click "#userSearch"
+  browser find "#content" getText() must contain("User Search")
+
+  browser $("#id") text "-1"
+  browser click "#search"
+  browser find "#content" getText() must contain("No users found for given search criteria")
+}
+```
+
+My first thought is that the search form will be enhanced with an error message, upon an invalid search criteria.
+And correctly we are red, as of course we have no implementation.
+
+To get to green, I'm first going to alter how the form data is submitted.
+Currently we have a standard submission (see the form code above) - instead I'm going to submit with some more CoffeeScript.
+Why? Because we are coding a single web page application, and we expect JSON (or an error string) from the server, we shall make an Ajax "post", but as mentioned, do it with the following CoffeeScript:
+
+```coffeescript
+$ ->
+    $("#userSearchForm").submit ->
+        $.post($(this).attr("action"), $(this).serialize(), (users) ->
+            $("#content").html("<ul id='usersList' style='color: white'></ul>")
+
+            $.each users, (index, user) ->
+                $("#usersList").append("<li>#{user.id}, #{user.firstName}, #{user.lastName}</li>")
+        )
+
+        false
+```
+
+Hopefully you will find this fairly interesting! What is it all about?
+The function within the post i.e. after the third "->", is code I've just copied from getting all the users.
+So that just leaves a few others lines to discuss.
+The very first "$ ->" is the CoffeeScript version of the jQuery "ready document" i.e. what to do upon form/page load.
+Next we attach a function (the post) to the "form submission".
+And finally we return "false" from the "form submission" function - "false" stops the continuation of the normal form submission - you could say we are overridding the normal functionality.

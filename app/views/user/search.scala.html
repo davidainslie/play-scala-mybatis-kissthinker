@@ -2,7 +2,9 @@
 
 @import helper._
 
-<form action="@routes.Users.users" method="post" class="form-horizontal">
+<script type="text/javascript" src='@routes.Assets.at("javascripts/user/users.js")'></script>
+
+<form id="userSearchForm" action="@routes.Users.users" method="post" class="form-horizontal">
     <fieldset>
         <legend>User Search</legend>
 
@@ -10,7 +12,7 @@
             <label class="control-label" for="id">ID</label>
 
             <div class="controls">
-                <input type="text" id="id" placeholder="ID">
+                <input id="id" type="text" placeholder="ID">
             </div>
         </div>
 
@@ -18,7 +20,7 @@
             <label class="control-label" for="filter">Filter</label>
 
             <div class="controls">
-                <input type="password" id="filter" placeholder="Filter">
+                <input id="filter" type="password" placeholder="Filter">
             </div>
         </div>
 
@@ -28,7 +30,7 @@
                     <input type="checkbox"> Case Sensitive
                 </label>
 
-                <button type="submit" class="btn">Search</button>
+                <button id="search" type="submit" class="btn">Search</button>
             </div>
         </div>
     </fieldset>

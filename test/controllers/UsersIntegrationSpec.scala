@@ -14,8 +14,23 @@ class UsersIntegrationSpec extends Specification {
       browser find "#content" getText() must contain("User Search")
 
       browser $("#id") text "1"
+      browser submit "#userSearchForm"
+
+      browser.waitUntil[Boolean] { browser pageSource() contains "McCartney" }
+
+      browser find "#content" getText() must contain("1, Paul, McCartney")
+    }
+
+    "be informed of non-existing user" in new WithChromeBrowser {
+      browser goTo "/"
+      browser title() mustEqual "Home"
+      browser click "#usersButtonGroup"
+      browser click "#userSearch"
+      browser find "#content" getText() must contain("User Search")
+
+      browser $("#id") text "-1"
       browser click "#search"
-      browser find "#content" getText() must contain("Paul McCartney")
+      browser find "#content" getText() must contain("No users found for given search criteria")
     }
 
     "view all users" in new WithChromeBrowser {
@@ -24,7 +39,7 @@ class UsersIntegrationSpec extends Specification {
       browser click "#usersButtonGroup"
       browser click "#users"
 
-      browser.waitUntil[Boolean](3, TimeUnit.SECONDS) {
+      browser.waitUntil[Boolean](5, TimeUnit.SECONDS) {
         browser pageSource() contains "Lennon"
       }
 

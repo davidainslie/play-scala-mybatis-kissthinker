@@ -19,7 +19,7 @@ object Users extends Controller with User.JSON {
   def user(id: Long) = Action {
     new UserDAO().find(id) match {
       case Some(u: User) => Ok(toJson(u))
-      case _ => NotFound
+      case _ => NotFound("BLAH")
     }
   }
 }
