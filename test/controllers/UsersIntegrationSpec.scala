@@ -11,12 +11,14 @@ class UsersIntegrationSpec extends Specification {
       browser title() mustEqual "Home"
       browser click "#usersButtonGroup"
       browser click "#userSearch"
-      browser find "#content" getText() must contain("User Search")
+      browser.await().atMost(10, TimeUnit.SECONDS).until("#content").containsText("User Search")
 
       browser $("#id") text "1"
       browser submit "#userSearchForm"
 
-      browser.waitUntil[Boolean] { browser pageSource() contains "McCartney" }
+      browser.waitUntil[Boolean](10, TimeUnit.SECONDS) {
+        browser title() contains "Users"
+      }
 
       browser find "#content" getText() must contain("1, Paul, McCartney")
     }
@@ -26,10 +28,15 @@ class UsersIntegrationSpec extends Specification {
       browser title() mustEqual "Home"
       browser click "#usersButtonGroup"
       browser click "#userSearch"
-      browser find "#content" getText() must contain("User Search")
+      browser.await().atMost(10, TimeUnit.SECONDS).until("#content").containsText("User Search")
 
       browser $("#id") text "-1"
       browser click "#search"
+
+      browser.waitUntil[Boolean](10, TimeUnit.SECONDS) {
+        browser title() contains "Users"
+      }
+
       browser find "#content" getText() must contain("No users found for given search criteria")
     }
 

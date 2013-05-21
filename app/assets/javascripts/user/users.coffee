@@ -1,5 +1,6 @@
 $("#users").click ->
     $.post "/users", (users) ->
+        $(document).attr("title", "Users")
         $("#content").html("<ul id='usersList' style='color: white'></ul>")
 
         $.each users, (index, user) ->
@@ -10,6 +11,7 @@ $("#users").click ->
 $ ->
     $("#userSearchForm").submit ->
         $.post($(this).attr("action"), $(this).serialize(), (users) ->
+            $(document).attr("title", "Users")
             $("#content").html("<ul id='usersList' style='color: white'></ul>")
 
             $.each users, (index, user) ->
