@@ -5,16 +5,18 @@ import play.api.test.Helpers._
 import play.api.http.HeaderNames
 import play.api.test.{WithServer, FakeRequest}
 import models.User
+import models.User._
 import json.JSONMatcher
+import play.api.libs.json.Json
 
-class UsersSpec extends Specification with JSONMatcher with User.JSON {
+class UsersSpec extends Specification with JSONMatcher {
   "User" should {
     "view a user profile" in new WithServer {
       val request = FakeRequest().withHeaders(HeaderNames.CONTENT_TYPE -> "application/json")
       val result = Users.user(1)(request)
       result isJSON
 
-      val user = parse(contentAsString(result)).as[User]
+      val user = Json.parse(contentAsString(result)).as[User]
 
       user mustEqual User(1, "Paul", "McCartney")
     }
@@ -31,7 +33,7 @@ class UsersSpec extends Specification with JSONMatcher with User.JSON {
       val result = Users.users()(request)
       result isJSON
 
-      val users = parse(contentAsString(result)).as[List[User]]
+      val users = Json.parse(contentAsString(result)).as[List[User]]
 
       users.size mustEqual 4
     }
