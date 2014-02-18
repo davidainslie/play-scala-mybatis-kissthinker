@@ -1016,5 +1016,3 @@ So that just leaves a few others lines to discuss.
 The very first "$ ->" is the CoffeeScript version of the jQuery "ready document" i.e. what to do upon form/page load.
 Next we attach a function (the post) to the "form submission".
 And finally we return "false" from the "form submission" function - "false" stops the continuation of the normal form submission - you could say we are overridding the normal functionality.
-
-TEST PUSH
