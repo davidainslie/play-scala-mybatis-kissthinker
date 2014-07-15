@@ -50,7 +50,7 @@ Specs
 -----
 First take a look at the specs.
 They can be run individually in your IDE or from SBT command line console using the "test" command.
-There are both unit and integration specs, where the integration specs often use an embedded Mongodb.
+There are both unit and integration specs.
 
 Application
 -----------
