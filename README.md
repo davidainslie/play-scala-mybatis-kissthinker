@@ -1,13 +1,30 @@
-Front to back demo/tutorial application showing how to use/approach the following:
+Demo/Tutorial of Scala/Play/MyBatis Application
+===============================================
 
-<ul>
-	<li>Scala (version 2.10.1)</li>
-	<li>Play (2.1.1)</li>
-	<li>Web technologies including Ajax, JavaScript and CoffeeScript, JQuery, Twitter Bootstrap, HTML, CSS</li>
-	<li>BDD with Specs2 1.13</li>
-	<li>BDD (Scala/Play) web application with FluentLenium (0.8.0)</li>
-	<li>MyBatis (using mybatis-scala-core version 1.0.1)</li>
-</ul>
+Front to back demo/tutorial application of taking a BDD approach to Scala stack technologies with MyBatis on the backend
+------------------------------------------------------------------------------------------------------------------------
+
+Application built with the following technologies:
+
+- Scala 2.10.1
+
+- SBT 0.12.2
+
+- Play 2.1.1
+
+- MyBatis 1.0.1
+
+- Specs2 1.13
+
+and including
+
+- HTML, CSS, JavaScript/CoffeeScript, JQuery, Ajax, Twitter Bootstrap
+
+Introduction
+------------
+
+A simple application that concentrates on the overall end-to-end process - the main goal being to take you through a BDD approach when creating a web application built on top of Scala stack technologies.
+As a result, the UI is fairly non-existent (it only shows the bare minimum) and "model" being processed and save on the backend is simply "users" and their "profiles".
 
 Regarding the utilised technologies, all dependencies can be seen in <root>/project/Build.scala
 We will be taking a small tangent from a traditional Play application and code a "single web page application" (instead of the usual multiple pages).
@@ -20,11 +37,23 @@ There are other versions of this application, which instead of using MyBatis use
     <li><a href="https://github.com/davidainslie/play-scala-reactive-mongo-kissthinker">Mongodb with ReactiveMongo</a></li>
 </ul>
 
+Setup
+-----
+
 Upon cloning this project (or downloading and decompressing the zip) you can run the application (before viewing the code) if you have Play installed.
 Don't have Play (or just need more information) then goto:
 http://www.playframework.com
 and
 http://www.playframework.com/documentation/2.1.1/Installing (where as of writing, the current version of Play is 2.1.1)
+
+Specs
+-----
+First take a look at the specs.
+They can be run individually in your IDE or from SBT command line console using the "test" command.
+There are both unit and integration specs, where the integration specs often use an embedded Mongodb.
+
+Application
+-----------
 
 Even though this application was written using BDD (Behaviour Driven Development) and not DDD (Domain Driven Development), before discussing the specs (tests) and implementation, here is the (domain) model to ease your understanding of what is going on.
 
